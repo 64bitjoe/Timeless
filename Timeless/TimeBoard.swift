@@ -17,6 +17,8 @@ struct TimeBoard: View {
             VStack(alignment: .leading, spacing: 20) {
                 TimePlatterView()
                 .frame(height: 300)
+                .position(x: 215, y: 100)
+                .shadow(color: .black, radius: 1)
                 TimePlatterView()
                     .frame(height:300)
                 
