@@ -13,6 +13,9 @@
 		D88F54D2257D349400B76099 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88F54D1257D349400B76099 /* Preview Assets.xcassets */; };
 		D88F54D4257D349400B76099 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F54D3257D349400B76099 /* Persistence.swift */; };
 		D88F54D7257D349400B76099 /* Timeless.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D88F54D5257D349400B76099 /* Timeless.xcdatamodeld */; };
+		D8EEF6ED257D3DA7007C237A /* TimePlatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EEF6EC257D3DA7007C237A /* TimePlatterView.swift */; };
+		D8EEF6F0257D3DB5007C237A /* TimeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */; };
+		D8EEF6F4257E8784007C237A /* TimelessTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EEF6F3257E8784007C237A /* TimelessTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		D88F54D3257D349400B76099 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D88F54D6257D349400B76099 /* Timeless.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Timeless.xcdatamodel; sourceTree = "<group>"; };
 		D88F54D8257D349400B76099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8EEF6EC257D3DA7007C237A /* TimePlatterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePlatterView.swift; sourceTree = "<group>"; };
+		D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBoard.swift; sourceTree = "<group>"; };
+		D8EEF6F3257E8784007C237A /* TimelessTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			children = (
 				D88F54CA257D349300B76099 /* TimelessApp.swift */,
 				D88F54CC257D349300B76099 /* ContentView.swift */,
+				D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */,
+				D8EEF6EC257D3DA7007C237A /* TimePlatterView.swift */,
+				D8EEF6F3257E8784007C237A /* TimelessTabView.swift */,
 				D88F54CE257D349400B76099 /* Assets.xcassets */,
 				D88F54D3257D349400B76099 /* Persistence.swift */,
 				D88F54D8257D349400B76099 /* Info.plist */,
@@ -145,7 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D88F54D4257D349400B76099 /* Persistence.swift in Sources */,
+				D8EEF6ED257D3DA7007C237A /* TimePlatterView.swift in Sources */,
 				D88F54CD257D349300B76099 /* ContentView.swift in Sources */,
+				D8EEF6F0257D3DB5007C237A /* TimeBoard.swift in Sources */,
+				D8EEF6F4257E8784007C237A /* TimelessTabView.swift in Sources */,
 				D88F54CB257D349300B76099 /* TimelessApp.swift in Sources */,
 				D88F54D7257D349400B76099 /* Timeless.xcdatamodeld in Sources */,
 			);

@@ -13,7 +13,7 @@ struct TimelessApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TimelessTabView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
