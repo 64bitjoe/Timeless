@@ -47,6 +47,20 @@ struct TimePlatterView: View {
     
 }
 
+//struct shareSheet : UIViewControllerRepresentable {
+//
+//    // Shared Data
+//    var items : [Any]
+//
+//    func makeUIViewController(context: Context) -> some UIActivityViewController {
+//        let controller = UIActivityViewController(activityItems: items, applicationActivities: nil)
+//        return controller
+//    }
+//    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {
+//
+//    }
+//}
+
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -55,3 +69,4 @@ struct SwiftUIView_Previews: PreviewProvider {
         }
     }
 }
+

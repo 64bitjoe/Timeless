@@ -12,18 +12,15 @@ struct TimeBoard: View {
     
     var body: some View {
         NavigationView{
-        ZStack {
             
-            VStack(alignment: .leading, spacing: 20) {
+            ScrollView {
+                
                 TimePlatterView()
-                .frame(height: 300)
-                .position(x: 215, y: 100)
-                .shadow(color: .black, radius: 1)
+//                .shadow(color: .black, radius: 1)
                 TimePlatterView()
-                    .frame(height:300)
                 
             }
-            }
+            .padding(.top, 10.0)
         .navigationTitle("Timeless")
         }
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D845A17425832ED30001DFAF /* Preset_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D845A17325832ED30001DFAF /* Preset_Data.swift */; };
 		D88F54CB257D349300B76099 /* TimelessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F54CA257D349300B76099 /* TimelessApp.swift */; };
 		D88F54CD257D349300B76099 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F54CC257D349300B76099 /* ContentView.swift */; };
 		D88F54CF257D349400B76099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88F54CE257D349400B76099 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D845A17325832ED30001DFAF /* Preset_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset_Data.swift; sourceTree = "<group>"; };
 		D88F54C7257D349300B76099 /* Timeless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88F54CA257D349300B76099 /* TimelessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessApp.swift; sourceTree = "<group>"; };
 		D88F54CC257D349300B76099 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				D88F54D8257D349400B76099 /* Info.plist */,
 				D88F54D5257D349400B76099 /* Timeless.xcdatamodeld */,
 				D88F54D0257D349400B76099 /* Preview Content */,
+				D845A17325832ED30001DFAF /* Preset_Data.swift */,
 			);
 			path = Timeless;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D845A17425832ED30001DFAF /* Preset_Data.swift in Sources */,
 				D88F54D4257D349400B76099 /* Persistence.swift in Sources */,
 				D8EEF6ED257D3DA7007C237A /* TimePlatterView.swift in Sources */,
 				D88F54CD257D349300B76099 /* ContentView.swift in Sources */,
