@@ -4,7 +4,7 @@
 //
 //  Created by Joe Speakman on 12/6/20.
 // Managing the amount of Time Platters to display
-
+// Possible array to hold time patter content?
 import SwiftUI
 
 struct TimeBoard: View {
