@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D81B08C126491B55004256E2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B08C026491B55004256E2 /* Settings.swift */; };
+		D81B08C326492B4C004256E2 /* FirstTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B08C226492B4C004256E2 /* FirstTimer.swift */; };
 		D845A17425832ED30001DFAF /* Preset_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D845A17325832ED30001DFAF /* Preset_Data.swift */; };
 		D88F54CB257D349300B76099 /* TimelessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F54CA257D349300B76099 /* TimelessApp.swift */; };
 		D88F54CD257D349300B76099 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F54CC257D349300B76099 /* ContentView.swift */; };
@@ -14,12 +16,13 @@
 		D88F54D2257D349400B76099 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88F54D1257D349400B76099 /* Preview Assets.xcassets */; };
 		D88F54D4257D349400B76099 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F54D3257D349400B76099 /* Persistence.swift */; };
 		D88F54D7257D349400B76099 /* Timeless.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D88F54D5257D349400B76099 /* Timeless.xcdatamodeld */; };
-		D8EEF6ED257D3DA7007C237A /* TimePlatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EEF6EC257D3DA7007C237A /* TimePlatterView.swift */; };
 		D8EEF6F0257D3DB5007C237A /* TimeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */; };
 		D8EEF6F4257E8784007C237A /* TimelessTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EEF6F3257E8784007C237A /* TimelessTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D81B08C026491B55004256E2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		D81B08C226492B4C004256E2 /* FirstTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimer.swift; sourceTree = "<group>"; };
 		D845A17325832ED30001DFAF /* Preset_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset_Data.swift; sourceTree = "<group>"; };
 		D88F54C7257D349300B76099 /* Timeless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88F54CA257D349300B76099 /* TimelessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessApp.swift; sourceTree = "<group>"; };
@@ -29,7 +32,6 @@
 		D88F54D3257D349400B76099 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D88F54D6257D349400B76099 /* Timeless.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Timeless.xcdatamodel; sourceTree = "<group>"; };
 		D88F54D8257D349400B76099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8EEF6EC257D3DA7007C237A /* TimePlatterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePlatterView.swift; sourceTree = "<group>"; };
 		D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBoard.swift; sourceTree = "<group>"; };
 		D8EEF6F3257E8784007C237A /* TimelessTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,8 +69,9 @@
 				D88F54CA257D349300B76099 /* TimelessApp.swift */,
 				D88F54CC257D349300B76099 /* ContentView.swift */,
 				D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */,
-				D8EEF6EC257D3DA7007C237A /* TimePlatterView.swift */,
+				D81B08C226492B4C004256E2 /* FirstTimer.swift */,
 				D8EEF6F3257E8784007C237A /* TimelessTabView.swift */,
+				D81B08C026491B55004256E2 /* Settings.swift */,
 				D88F54CE257D349400B76099 /* Assets.xcassets */,
 				D88F54D3257D349400B76099 /* Persistence.swift */,
 				D88F54D8257D349400B76099 /* Info.plist */,
@@ -158,10 +161,11 @@
 			files = (
 				D845A17425832ED30001DFAF /* Preset_Data.swift in Sources */,
 				D88F54D4257D349400B76099 /* Persistence.swift in Sources */,
-				D8EEF6ED257D3DA7007C237A /* TimePlatterView.swift in Sources */,
+				D81B08C326492B4C004256E2 /* FirstTimer.swift in Sources */,
 				D88F54CD257D349300B76099 /* ContentView.swift in Sources */,
 				D8EEF6F0257D3DB5007C237A /* TimeBoard.swift in Sources */,
 				D8EEF6F4257E8784007C237A /* TimelessTabView.swift in Sources */,
+				D81B08C126491B55004256E2 /* Settings.swift in Sources */,
 				D88F54CB257D349300B76099 /* TimelessApp.swift in Sources */,
 				D88F54D7257D349400B76099 /* Timeless.xcdatamodeld in Sources */,
 			);
@@ -221,7 +225,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -276,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -293,10 +297,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Timeless/Preview Content\"";
-				DEVELOPMENT_TEAM = 9BWTU9G7ZG;
+				DEVELOPMENT_TEAM = XL56SM6U5N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Timeless/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,10 +319,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Timeless/Preview Content\"";
-				DEVELOPMENT_TEAM = 9BWTU9G7ZG;
+				DEVELOPMENT_TEAM = XL56SM6U5N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Timeless/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

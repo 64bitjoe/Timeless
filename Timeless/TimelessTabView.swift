@@ -10,13 +10,13 @@ import SwiftUI
 struct TimelessTabView: View {
     var body: some View {
         TabView {
-            TimeBoard()
+            TimeBoard(timer: FirstTimer())
                 .tabItem {
                     Image(systemName: "clock")
                     Text("Countdown")
                 }
             // Settings View needs Creation.
-            ContentView()
+            Settings(timer: FirstTimer())
                 .tabItem {
                     Image(systemName: "gearshape")
                     Text("Settings")

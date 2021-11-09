@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct TimePlatterView: View {
+    @ObservedObject var timer: FirstTimer
     var body: some View {
         GroupBox() {
             HStack {
@@ -17,7 +18,7 @@ struct TimePlatterView: View {
                     .font(Font.system(.largeTitle).bold())
                 Spacer()
                 // Example Text is for Label for Object name
-                Text("Example")
+                Text(timer.name)
                 Spacer()
                 //Button needs function added
                 Button(action: {
@@ -40,6 +41,7 @@ struct TimePlatterView: View {
                
                 
         }
+        
         .padding()
         
         
@@ -47,24 +49,12 @@ struct TimePlatterView: View {
     
 }
 
-//struct shareSheet : UIViewControllerRepresentable {
-//
-//    // Shared Data
-//    var items : [Any]
-//
-//    func makeUIViewController(context: Context) -> some UIActivityViewController {
-//        let controller = UIActivityViewController(activityItems: items, applicationActivities: nil)
-//        return controller
-//    }
-//    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {
-//
-//    }
-//}
+
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TimePlatterView()
+            TimePlatterView(timer: FirstTimer())
                 .previewDevice("iPhone 12 Pro Max")
         }
     }
