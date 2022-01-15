@@ -9,75 +9,88 @@ import SwiftUI
 
 struct TimeBoard: View {
     @State private var selectedTab = 1
+    @State private var countOfTimer = [0]
     @ObservedObject var timer: FirstTimer
 
     var body: some View {
         NavigationView{
             
-            ScrollView {
-                GroupBox() {
-                    HStack {
-                        Text(timer.emoji)
-                            .font(.largeTitle)
-                            .multilineTextAlignment(.center)
-                        Spacer()
-                        // Example Text is for Label for Object name
-                        Text(timer.name)
-                            .font(.headline.bold())
-                        Spacer()
-                        //Button needs function added
-                        Button(action: {
-                            print("Put function info here")
-                        }) {
-                            // Button Color Needs Changing.
-                            Image(systemName: "square.and.arrow.up")
-                                .font(Font.system(.largeTitle).bold())
-                        
+            List {
+                ForEach(countOfTimer, id: \.self ) { countOfTimer in
+                    if $countOfTimer.contains(where: 0) {
+                        EmptyView()
+                        //TODO: Add Get Started View.
+                    }
+                        GroupBox() {
+                            HStack {
+                                Text(timer.emoji)
+                                    .font(.largeTitle)
+        //                            .multilineTextAlignment(.center)
+                                Spacer()
+                                // Example Text is for Label for Object name
+                                Text(timer.name)
+                                    .font(.headline.bold())
+                                Spacer()
+                                //Button needs function added
+                                Button(action: {
+                                    print("Put function info here")
+                                }) {
+                                    // Button Color Needs Changing.
+                                    Image(systemName: "square.and.arrow.up")
+                                        .font(Font.system(.largeTitle).bold())
+                                
+                                }
+                            }
+                            
+                                VStack {
+                                    Text("Time Left")
+                                        .font(.headline)
+                                    Text("140 Days")
+                                        .font(.largeTitle).bold()
+                                    Text("1 Hour, 48 Minutes")
+                                }
+                               
+                                
                         }
+                        .padding()
+                    } else {
+                        /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
                     }
                     
-                        VStack {
-                            Text("Time Left")
-                                .font(.headline)
-                            Text("140 Days")
-                                .font(.largeTitle).bold()
-                            Text("1 Hour, 48 Minutes")
-                        }
-                       
-                        
+                
                 }
-                .padding()
-                GroupBox() {
-                    HStack {
-                        Text(timer.emoji)
-                            .font(.headline)
-                        Spacer()
-                        // Example Text is for Label for Object name
-                        Text(timer.name)
-                            .font(.headline.bold())
-                        Spacer()
-                        //Button needs function added
-                        Button(action: {
-                            print("Put function info here")
-                        }) {
-                            // Button Color Needs Changing.
-                            Image(systemName: "square.and.arrow.up")
-                                .font(Font.system(.largeTitle).bold())
-                        
-                        }
-                    }
-                    
-                        VStack {
-                            Text("Time Left")
-                                .font(.headline)
-                            Text("140 Days")
-                                .font(.largeTitle).bold()
-                            Text("1 Hour, 48 Minutes")
-                        }
-                       
-                        
-                }
-                .padding()
+
+//                GroupBox() {
+//                    HStack {
+//                        Text(timer.emoji)
+//                            .font(.headline)
+//                        Spacer()
+//                        // Example Text is for Label for Object name
+//                        Text(timer.name)
+//                            .font(.headline.bold())
+//                        Spacer()
+//                        //Button needs function added
+//                        Button(action: {
+//                            print("Put function info here")
+//                        }) {
+//                            // Button Color Needs Changing.
+//                            Image(systemName: "square.and.arrow.up")
+//                                .font(Font.system(.largeTitle).bold())
+//
+//                        }
+//                    }
+//
+//                        VStack {
+//                            Text("Time Left")
+//                                .font(.headline)
+//                            Text("140 Days")
+//                                .font(.largeTitle).bold()
+//                            Text("1 Hour, 48 Minutes")
+//                        }
+//
+//
+//                }
+//                .padding()
             }
             .padding(.top, 10.0)
         .navigationTitle("Timeless")
