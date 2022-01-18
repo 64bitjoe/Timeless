@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Settings: View {
     @ObservedObject var timer: FirstTimer
+    @State private var showingSheet = false
     @State private var pickerValue = 0
     @State private var name = ""
     @State private var emoji = ""
@@ -37,7 +38,7 @@ struct Settings: View {
                         }
                     }
                     Button {
-                        saveButton()
+                        showingSheet.toggle()
                     } label: {
                         Text("Save")
                             .frame(width: 375, height: 50, alignment: .center)
@@ -46,12 +47,16 @@ struct Settings: View {
                             .accentColor(.indigo)
                            
                     }
+                    .sheet(isPresented: $showingSheet){
+                        IconSwitcherView()
+                    }
                 }.navigationTitle("Configure Countdown")
             }
         }
     }
-}
-func saveButton() {
+    func saveButton() {
+    
+    }
 
 }
 
