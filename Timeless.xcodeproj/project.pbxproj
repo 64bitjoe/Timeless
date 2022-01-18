@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4133E2632794D70800C0AB1B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utils/Constants.swift; sourceTree = "<group>"; };
+		4133E2632794D70800C0AB1B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D81B08C026491B55004256E2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		D81B08C226492B4C004256E2 /* FirstTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimer.swift; sourceTree = "<group>"; };
 		D845A17325832ED30001DFAF /* Preset_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset_Data.swift; sourceTree = "<group>"; };
@@ -49,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41391BE827975B6E00154C83 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D88F54CE257D349400B76099 /* Assets.xcassets */,
+				D88F54D8257D349400B76099 /* Info.plist */,
+				D88F54D5257D349400B76099 /* Timeless.xcdatamodeld */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		41391BEA27975BD200154C83 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4133E2632794D70800C0AB1B /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D88F54BE257D349300B76099 = {
 			isa = PBXGroup;
 			children = (
@@ -68,17 +86,15 @@
 		D88F54C9257D349300B76099 /* Timeless */ = {
 			isa = PBXGroup;
 			children = (
+				41391BEA27975BD200154C83 /* Utils */,
+				41391BE827975B6E00154C83 /* SupportingFiles */,
 				D88F54CA257D349300B76099 /* TimelessApp.swift */,
 				D88F54CC257D349300B76099 /* ContentView.swift */,
 				D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */,
-				4133E2632794D70800C0AB1B /* Constants.swift */,
 				D81B08C226492B4C004256E2 /* FirstTimer.swift */,
 				D8EEF6F3257E8784007C237A /* TimelessTabView.swift */,
 				D81B08C026491B55004256E2 /* Settings.swift */,
-				D88F54CE257D349400B76099 /* Assets.xcassets */,
 				D88F54D3257D349400B76099 /* Persistence.swift */,
-				D88F54D8257D349400B76099 /* Info.plist */,
-				D88F54D5257D349400B76099 /* Timeless.xcdatamodeld */,
 				D88F54D0257D349400B76099 /* Preview Content */,
 				D845A17325832ED30001DFAF /* Preset_Data.swift */,
 			);
