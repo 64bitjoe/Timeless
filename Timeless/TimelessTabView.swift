@@ -15,7 +15,6 @@ struct TimelessTabView: View {
                     Image(systemName: "clock")
                     Text("Countdown")
                 }
-            // Settings View needs Creation.
             Settings(timer: FirstTimer())
                 .tabItem {
                     Image(systemName: "gearshape")

@@ -12,37 +12,30 @@ struct TimeBoard: View {
     
     @State private var selectedTab = 1
     @State private var countOfTimers = [0]
+    @State private var dragCompleted = false
     @ObservedObject var timer: FirstTimer
 
     var body: some View {
         NavigationView{
             ScrollView{
-//            List {
                 ForEach(countOfTimers, id: \.self ) { countOfTimers in
                         GroupBox() {
                             HStack {
-                                Text(timer.emoji)
-                                    .font(.largeTitle)
-//                                    .multilineTextAlignment(.center)
-                                Spacer()
-                                // Example Text is for Label for Object name
-                                Text(timer.name)
-                                    .font(.headline.bold())
-                                Spacer()
-                                //Button needs function added
-                                Button(action: {
-                                    print("Put function info here")
-                                }) {
-                                    // Button Color Needs Changing.
-                                    Image(systemName: "square.and.arrow.up")
-                                        .font(Font.system(.largeTitle).bold())
-                                
+                                Button {
+                                 print("Put function info here")
+
+                                } label: {
+                                    Text(timer.emoji)
+                                        .font(.largeTitle)
                                 }
+                                Text(timer.name)
+                                    .font(.largeTitle.bold())
+                                Spacer()
                             }
                             
-                                VStack {
+                                LazyVStack {
                                     Text("Time Left")
-                                        .font(.headline)
+                                        .font(.subheadline)
                                     Text("140 Days")
                                         .font(.largeTitle).bold()
                                     Text("1 Hour, 48 Minutes")
@@ -50,7 +43,11 @@ struct TimeBoard: View {
                                
                                 
                         }
+//                        .gesture(DragGesture(minimumDistance: 50).onEnded({ _ in
+//                            dragCompleted = true
+//                        }))
                         .padding()
+                    
                     }
                     
                 
@@ -76,6 +73,6 @@ struct TimeBoard: View {
 struct TimeBoard_Previews: PreviewProvider {
     static var previews: some View {
         TimeBoard(timer: FirstTimer())
-            .previewDevice("iPhone 12 Pro Max")
+            .previewDevice("iPhone 13 Pro Max")
     }
 }
