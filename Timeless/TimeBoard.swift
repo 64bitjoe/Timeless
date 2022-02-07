@@ -15,61 +15,62 @@ struct TimeBoard: View {
     @State private var editTimerShowing = false
     
     @ObservedObject var timer: FirstTimer
-
+    
     var body: some View {
         NavigationView{
             ScrollView{
                 ForEach(countOfTimers, id: \.self ) { countOfTimers in
-                        GroupBox() {
-                            HStack {
-                                Button {
-                                    editTimerShowing.toggle()
-                                } label: {
-                                    Text(timer.emoji)
-                                        .font(.largeTitle)
-                                }
-                                Text(timer.name)
-                                    .font(.largeTitle.bold())
-                                Spacer()
+                    GroupBox() {
+                        HStack {
+                            Button {
+                                editTimerShowing.toggle()
+                            } label: {
+                                Text(timer.emoji)
+                                    .font(.largeTitle)
                             }
-                            
-                                LazyVStack {
-                                    Text("Time Left")
-                                        .font(.subheadline)
-                                    Text("140 Days")
-                                        .font(.largeTitle).bold()
-                                    Text("1 Hour, 48 Minutes")
-                                }
-                               
-                                
+                            Text(timer.name)
+                                .font(.largeTitle.bold())
+                            Spacer()
                         }
-//                        .gesture(DragGesture(minimumDistance: 50).onEnded({ _ in
-//                            dragCompleted = true
-//                        }))
-                        .padding()
-                    
+                        
+                        LazyVStack {
+                            Text("Time Left")
+                                .font(.subheadline)
+                            Text("140 Days")
+                                .font(.largeTitle).bold()
+                            Text("1 Hour, 48 Minutes")
+                        }
+                        
+                        
                     }
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(timer.color, lineWidth: 4)
+                    )
                     
+                    .padding()
+                    
+                }
                 
-//                }
+                
             }
             .padding(.top, 10.0)
             .navigationTitle(Constants.Labels.appName)
-        .toolbar {
-            Button {
-                //TODO: Create Modal to add in countdown.
-                countOfTimers.append(countOfTimers.count+1)
-            } label: {
-                Constants.Images.plus
+            .toolbar {
+                Button {
+                    //TODO: Create Modal to add in countdown.
+                    countOfTimers.append(countOfTimers.count+1)
+                } label: {
+                    Constants.Images.plus
+                }
+                
             }
-
-        }
-        .sheet(isPresented: $editTimerShowing) {
-            EditTimer(timer: FirstTimer())
-        }
+            .sheet(isPresented: $editTimerShowing) {
+                EditTimer(timer: FirstTimer())
             }
-
         }
+        
+    }
     
 }
 
