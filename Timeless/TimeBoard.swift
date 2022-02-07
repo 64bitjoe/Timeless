@@ -12,7 +12,8 @@ struct TimeBoard: View {
     
     @State private var selectedTab = 1
     @State private var countOfTimers = [0]
-    @State private var dragCompleted = false
+    @State private var editTimerShowing = false
+    
     @ObservedObject var timer: FirstTimer
 
     var body: some View {
@@ -22,8 +23,7 @@ struct TimeBoard: View {
                         GroupBox() {
                             HStack {
                                 Button {
-                                 print("Put function info here")
-
+                                    editTimerShowing.toggle()
                                 } label: {
                                     Text(timer.emoji)
                                         .font(.largeTitle)
@@ -63,6 +63,9 @@ struct TimeBoard: View {
                 Constants.Images.plus
             }
 
+        }
+        .sheet(isPresented: $editTimerShowing) {
+            EditTimer(timer: FirstTimer())
         }
             }
 

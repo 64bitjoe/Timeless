@@ -1,5 +1,5 @@
 //
-//  Settings.swift
+//  EditTimer.swift
 //  Timeless
 //
 //  Created by Joe Speakman on 5/10/21.
@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct Settings: View {
+struct EditTimer: View {
     @ObservedObject var timer: FirstTimer
+    @Environment(\.dismiss) var dismiss
     @State private var showingSheet = false
     @State private var pickerValue = 0
     @State private var name = ""
@@ -16,13 +17,6 @@ struct Settings: View {
     @State private var countdownDate = Date()
     var body: some View {
         NavigationView {
-            VStack {
-                Picker(selection: $pickerValue, label: Text("What is your favorite color?")) {
-                    Text("Timer 1").tag(0)
-                    Text("Timer 2").tag(1)
-                }
-                .padding(.horizontal)
-                .pickerStyle(SegmentedPickerStyle())
                 VStack {
                     Form {
                         Section (header: Text("Name")) {
@@ -47,23 +41,20 @@ struct Settings: View {
                             .accentColor(.indigo)
                            
                     }
-                    .sheet(isPresented: $showingSheet){
-                        IconSwitcherView()
-                    }
                 }.navigationTitle("Configure Countdown")
-            }
         }
     }
     func saveButton() {
-    
+        // Save changes
+        dismiss()
     }
 
 }
 
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
-        Settings(timer: FirstTimer())
-        Settings(timer: FirstTimer())
+        EditTimer(timer: FirstTimer())
+        EditTimer(timer: FirstTimer())
             .preferredColorScheme(.dark)
 
     }

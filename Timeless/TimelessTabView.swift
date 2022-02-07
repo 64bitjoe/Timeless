@@ -15,7 +15,7 @@ struct TimelessTabView: View {
                     Image(systemName: "clock")
                     Text("Countdown")
                 }
-            Settings(timer: FirstTimer())
+            EditTimer(timer: FirstTimer())
                 .tabItem {
                     Image(systemName: "gearshape")
                     Text("Settings")
