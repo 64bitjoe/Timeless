@@ -13,6 +13,7 @@ struct Constants {
     struct Images {
         static var plus = Image(systemName: "plus")
         static var share = Image(systemName: "square.and.arrow.up")
+        static var edit = Image(systemName: "pencil")
     }
     struct Labels {
         static var appName = "Cats Does Countdown"

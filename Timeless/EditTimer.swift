@@ -14,6 +14,7 @@ struct EditTimer: View {
     @State private var pickerValue = 0
     @State private var name = ""
     @State private var emoji = ""
+    @State private var color = Color.white
     @State private var countdownDate = Date()
     var body: some View {
         NavigationView {

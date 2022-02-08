@@ -13,6 +13,7 @@ struct TimeBoard: View {
     @State private var selectedTab = 1
     @State private var countOfTimers = [0]
     @State private var editTimerShowing = false
+    @State private var pickerValue = 0
     
     @ObservedObject var timer: FirstTimer
     
@@ -22,11 +23,21 @@ struct TimeBoard: View {
                 ForEach(countOfTimers, id: \.self ) { countOfTimers in
                     GroupBox() {
                         HStack {
-                            Button {
-                                editTimerShowing.toggle()
+                            Menu {
+                                Button {
+                                    print("Share Sheet here")
+                                } label: {
+                                    Constants.Images.share
+                                    Text("Share")
+                                }
+                                Button {
+                                    editTimerShowing.toggle()
+                                } label: {
+                                    Constants.Images.edit
+                                    Text("Edit Timer")
+                                }
                             } label: {
-                                Text(timer.emoji)
-                                    .font(.largeTitle)
+                            Text(timer.emoji).font(.largeTitle)
                             }
                             Text(timer.name)
                                 .font(.largeTitle.bold())
@@ -45,7 +56,7 @@ struct TimeBoard: View {
                     }
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
-                            .stroke(timer.color, lineWidth: 4)
+                            .stroke(timer.color, lineWidth: 1)
                     )
                     
                     .padding()
@@ -54,7 +65,7 @@ struct TimeBoard: View {
                 
                 
             }
-            .padding(.top, 10.0)
+            .padding(.top, 7.5)
             .navigationTitle(Constants.Labels.appName)
             .toolbar {
                 Button {
