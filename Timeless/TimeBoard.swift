@@ -37,7 +37,7 @@ struct TimeBoard: View {
                                     Text("Edit Timer")
                                 }
                             } label: {
-                            Text(timer.emoji).font(.largeTitle)
+                                Text(timer.emoji).font(.largeTitle)
                             }
                             Text(timer.name)
                                 .font(.largeTitle.bold())

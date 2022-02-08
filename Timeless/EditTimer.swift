@@ -21,11 +21,12 @@ struct EditTimer: View {
                 VStack {
                     Form {
                         Section (header: Text("Name")) {
-                            TextField("Vacation!", text: $timer.name)
-                                .font(.title)
+                                TextField("Vacation!", text: $timer.name)
+                                .font(.title2)
+                                TextField("🏝", text: $timer.emoji)
+                                    .font(.title)
                             
-                            TextField("🏝", text: $timer.emoji)
-                                .font(.title)
+                            ColorPicker("Set Timer border color", selection: $color, supportsOpacity: false)
                         }
                         Section (header: Text("Countdown to:")) {
                             DatePicker(selection: $countdownDate, label: { Text("Date & Time") })
