@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditTimer: View {
     @ObservedObject var timer: FirstTimer
-    @Environment(\.dismiss) var dismiss
+    @Binding var isPresented: Bool
     @State private var showingSheet = false
     @State private var pickerValue = 0
     @State private var name = ""
@@ -34,7 +34,7 @@ struct EditTimer: View {
                         }
                     }
                     Button {
-                        showingSheet.toggle()
+                        saveButton()
                     } label: {
                         Text("Save")
                             .frame(width: 375, height: 50, alignment: .center)
@@ -48,15 +48,15 @@ struct EditTimer: View {
     }
     func saveButton() {
         // Save changes
-        dismiss()
+        isPresented = false
     }
 
 }
 
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
-        EditTimer(timer: FirstTimer())
-        EditTimer(timer: FirstTimer())
+        EditTimer(timer: FirstTimer(), isPresented: .constant(true))
+        EditTimer(timer: FirstTimer(), isPresented: .constant(true))
             .preferredColorScheme(.dark)
 
     }
