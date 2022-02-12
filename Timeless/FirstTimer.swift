@@ -13,5 +13,5 @@ class FirstTimer: ObservableObject {
     @Published var emoji = "🏝"
     @Published var endDate = "Aug 10th 2022"
     @Published var color = Color.red
-    
+    @Published var gradientColors = [Color.red, Color.purple, Color.blue]
 }

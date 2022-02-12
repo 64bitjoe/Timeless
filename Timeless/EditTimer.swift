@@ -14,7 +14,7 @@ struct EditTimer: View {
     @State private var pickerValue = 0
     @State private var name = ""
     @State private var emoji = ""
-    @State private var color = Color.white
+    @State private var color = Color.gray
     @State private var countdownDate = Date()
     var body: some View {
         NavigationView {
@@ -22,8 +22,8 @@ struct EditTimer: View {
                     Form {
                         Section (header: Text("Name")) {
                                 TextField("Vacation!", text: $timer.name)
-                                .font(.title2)
-                                TextField("🏝", text: $timer.emoji)
+                                .font(.title2.weight(.semibold))
+                                TextField("🏝", text: $emoji)
                                     .font(.title)
                             
                             ColorPicker("Set Timer border color", selection: $color, supportsOpacity: false)
@@ -48,9 +48,21 @@ struct EditTimer: View {
     }
     func saveButton() {
         // Save changes
+        //TODO: Make it so all feilds must be filled in. allso allow users to create gradient array.
+        //TODO: sender makes view conditional.
         isPresented = false
+        emojiCheck()
     }
-
+    func emojiCheck() {
+        if emoji.count == 1 {
+            print("Passing the req")
+        } else if emoji.count == 0 {
+            print("No value was passed")
+        }
+        else {
+            print("Display UI Alert that only one emoji can be set")
+        }
+    }
 }
 
 struct Settings_Previews: PreviewProvider {
