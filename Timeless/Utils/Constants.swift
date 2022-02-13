@@ -17,6 +17,7 @@ struct Constants {
     }
     struct Labels {
         static var appName = "Cats Does Countdown"
+        
     }
     
     struct SampleData {
@@ -24,5 +25,11 @@ struct Constants {
     }
     struct TimeBoard {
         static var padding = 10.0
+    }
+    struct ModifyTimer {
+        
+        static var emojiErrorTitle = "Error"
+        static var emojiErrorMessage = "Please Check to make sure that only one emoji was entered."
+        static var emojiErrorButton = "Try Again"
     }
 }

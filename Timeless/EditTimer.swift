@@ -11,6 +11,7 @@ struct EditTimer: View {
     @ObservedObject var timer: FirstTimer
     @Binding var isPresented: Bool
     @State private var showingSheet = false
+    @State private var showingAlert = false
     @State private var pickerValue = 0
     @State private var name = ""
     @State private var emoji = ""
@@ -23,7 +24,7 @@ struct EditTimer: View {
                         Section (header: Text("Name")) {
                                 TextField("Vacation!", text: $timer.name)
                                 .font(.title2.weight(.semibold))
-                                TextField("🏝", text: $emoji)
+                                TextField("Type an emoji", text: $emoji)
                                     .font(.title)
                             
                             ColorPicker("Set Timer border color", selection: $color, supportsOpacity: false)
@@ -34,7 +35,11 @@ struct EditTimer: View {
                         }
                     }
                     Button {
-                        saveButton()
+                        if emoji.isSingleEmoji {
+                            isPresented = false
+                        } else {
+                            showingAlert = true
+                        }
                     } label: {
                         Text("Save")
                             .frame(width: 375, height: 50, alignment: .center)
@@ -42,6 +47,9 @@ struct EditTimer: View {
                             .background(RoundedRectangle(cornerRadius: 8))
                             .accentColor(.indigo)
                            
+                    }
+                    .alert(isPresented: $showingAlert) {
+                        Alert(title: Text(Constants.ModifyTimer.emojiErrorTitle), message: Text(Constants.ModifyTimer.emojiErrorMessage),             dismissButton: .destructive(Text(Constants.ModifyTimer.emojiErrorButton)))
                     }
                 }.navigationTitle("Configure Countdown")
         }
@@ -51,17 +59,6 @@ struct EditTimer: View {
         //TODO: Make it so all feilds must be filled in. allso allow users to create gradient array.
         //TODO: sender makes view conditional.
         isPresented = false
-        emojiCheck()
-    }
-    func emojiCheck() {
-        if emoji.count == 1 {
-            print("Passing the req")
-        } else if emoji.count == 0 {
-            print("No value was passed")
-        }
-        else {
-            print("Display UI Alert that only one emoji can be set")
-        }
     }
 }
 
