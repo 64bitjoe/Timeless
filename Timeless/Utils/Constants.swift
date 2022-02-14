@@ -32,4 +32,15 @@ struct Constants {
         static var emojiErrorMessage = "Please Check to make sure that only one emoji was entered."
         static var emojiErrorButton = "Try Again"
     }
+    struct AddTimer {
+        static var startText = "Get Started"
+        static var createText = "Create First timer"
+
+    }
+    
+    struct Gradient {
+        static var gradient: LinearGradient {
+            LinearGradient(colors: [.red, .purple, .blue], startPoint: .leading, endPoint: .trailing)
+        }
+    }
 }

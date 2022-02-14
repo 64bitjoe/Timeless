@@ -25,7 +25,7 @@ struct EditTimer: View {
                                 TextField("Vacation!", text: $timer.name)
                                 .font(.title2.weight(.semibold))
                                 TextField("Type an emoji", text: $emoji)
-                                    .font(.title)
+//                                    .font(.title)
                             
                             ColorPicker("Set Timer border color", selection: $color, supportsOpacity: false)
                         }

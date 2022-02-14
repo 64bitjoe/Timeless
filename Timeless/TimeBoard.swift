@@ -16,9 +16,6 @@ struct TimeBoard: View {
     @State private var pickerValue = 0
     
     @ObservedObject var timer: FirstTimer
-    var gradient: LinearGradient {
-        LinearGradient(colors: [.red, .purple, .blue], startPoint: .leading, endPoint: .trailing)
-    }
     
     var body: some View {
         NavigationView{
@@ -43,7 +40,7 @@ struct TimeBoard: View {
                                 Text(timer.emoji).font(.largeTitle)
                             }
                             Text(timer.name)
-                                .foregroundStyle(gradient)
+                                .foregroundStyle(Constants.Gradient.gradient)
                                 .font(.largeTitle.bold())
                             Spacer()
                         }
@@ -66,8 +63,10 @@ struct TimeBoard: View {
                     .padding()
                     
                 }
-                
-                
+                AddTimer()
+                    .onTapGesture(count: 1) {
+                        editTimerShowing.toggle()
+                    }
             }
             .padding(.top, 7.5)
             .navigationTitle(Constants.Labels.appName)

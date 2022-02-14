@@ -8,33 +8,29 @@
 import SwiftUI
 
 struct AddTimer: View {
+    @State var tapped = false
+    let constants = Constants.AddTimer.self
     var body: some View {
         GroupBox() {
             LazyVStack {
-                Text("Get Started")
-//                    .foregroundStyle(gradient)
+                Text(constants.startText)
+//                    .foregroundStyle(Constants.Gradient.gradient)
                     .font(.largeTitle.bold())
-                Text("Create First timer")
+                Text(constants.createText)
                     .font(.subheadline)
                     .padding(.bottom)
-                Button {
-                    //Will present the new timer scren
-                    
-                } label: {
-                    Image(systemName: "plus.square.fill")
-                        .font(.largeTitle.bold())
-                }
+                Image(systemName: "plus.square.fill")
+                    .font(.largeTitle.bold())
             }
-            
             
         }
         .overlay(
             RoundedRectangle(cornerRadius: 16)
                 .stroke(Color.gray, lineWidth: 1)
         )
-        
         .padding()
     }
+
 }
 
 struct AddTimer_Previews: PreviewProvider {
