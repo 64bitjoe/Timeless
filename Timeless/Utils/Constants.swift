@@ -20,11 +20,11 @@ struct Constants {
         
     }
     
-    struct SampleData {
-//        static var
-    }
     struct TimeBoard {
         static var padding = 10.0
+        static var shareLabel = "Share"
+        static var editLabel = "Edit Countdown"
+        static var timeLeft = "Time Left"
     }
     struct ModifyTimer {
         

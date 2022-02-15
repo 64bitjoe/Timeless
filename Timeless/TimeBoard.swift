@@ -28,13 +28,13 @@ struct TimeBoard: View {
                                     print("Share Sheet here")
                                 } label: {
                                     Constants.Images.share
-                                    Text("Share")
+                                    Text(Constants.TimeBoard.shareLabel)
                                 }
                                 Button {
                                     editTimerShowing.toggle()
                                 } label: {
                                     Constants.Images.edit
-                                    Text("Edit Timer")
+                                    Text(Constants.TimeBoard.editLabel)
                                 }
                             } label: {
                                 Text(timer.emoji).font(.largeTitle)
@@ -46,7 +46,7 @@ struct TimeBoard: View {
                         }
                         
                         LazyVStack {
-                            Text("Time Left")
+                            Text(Constants.TimeBoard.timeLeft)
                                 .font(.subheadline)
                             Text("140 Days")
                                 .font(.largeTitle).bold()
@@ -72,6 +72,7 @@ struct TimeBoard: View {
             .navigationTitle(Constants.Labels.appName)
             .toolbar {
                 Button {
+                    editTimerShowing.toggle()
                     //TODO: Create Modal to add in countdown.
                     countOfTimers.append(countOfTimers.count+1)
                 } label: {
