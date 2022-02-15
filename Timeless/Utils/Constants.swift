@@ -27,10 +27,17 @@ struct Constants {
         static var timeLeft = "Time Left"
     }
     struct ModifyTimer {
-        
+        static var firstSectionHeader = "Set Details"
+        static var coutndownTextFeild = "Vacation!"
+        static var emojiTextFeild = "Type an emoji"
         static var emojiErrorTitle = "Error"
         static var emojiErrorMessage = "Please Check to make sure that only one emoji was entered."
         static var emojiErrorButton = "Try Again"
+        static var colorLabel = "Set Timer border color"
+        static var countdownLabel = "Countdown to:"
+        static var dateTimeLabel = "Date & Time"
+        static var saveButton = "Save"
+        
     }
     struct AddTimer {
         static var startText = "Get Started"

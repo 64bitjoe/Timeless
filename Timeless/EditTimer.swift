@@ -21,16 +21,16 @@ struct EditTimer: View {
         NavigationView {
                 VStack {
                     Form {
-                        Section (header: Text("Name")) {
-                                TextField("Vacation!", text: $timer.name)
+                        Section (header: Text(Constants.ModifyTimer.firstSectionHeader)) {
+                            TextField(Constants.ModifyTimer.coutndownTextFeild, text: $timer.name)
                                 .font(.title2.weight(.semibold))
-                                TextField("Type an emoji", text: $emoji)
+                            TextField(Constants.ModifyTimer.emojiTextFeild, text: $emoji)
 //                                    .font(.title)
                             
-                            ColorPicker("Set Timer border color", selection: $color, supportsOpacity: false)
+                            ColorPicker(Constants.ModifyTimer.colorLabel, selection: $color, supportsOpacity: false)
                         }
-                        Section (header: Text("Countdown to:")) {
-                            DatePicker(selection: $countdownDate, label: { Text("Date & Time") })
+                        Section (header: Text(Constants.ModifyTimer.countdownLabel)) {
+                            DatePicker(selection: $countdownDate, label: { Text(Constants.ModifyTimer.dateTimeLabel) })
                           
                         }
                     }
@@ -41,7 +41,7 @@ struct EditTimer: View {
                             showingAlert = true
                         }
                     } label: {
-                        Text("Save")
+                        Text(Constants.ModifyTimer.saveButton)
                             .frame(width: 375, height: 50, alignment: .center)
                             .foregroundColor(.white)
                             .background(RoundedRectangle(cornerRadius: 8))
