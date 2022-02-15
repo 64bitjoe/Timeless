@@ -14,6 +14,7 @@ struct TimeBoard: View {
     @State private var countOfTimers = [0]
     @State private var editTimerShowing = false
     @State private var pickerValue = 0
+    @State private var showShareSheet = false
     
     @ObservedObject var timer: FirstTimer
     
@@ -25,7 +26,8 @@ struct TimeBoard: View {
                         HStack {
                             Menu {
                                 Button {
-                                    print("Share Sheet here")
+                                    showShareSheet.toggle()
+                                    
                                 } label: {
                                     Constants.Images.share
                                     Text(Constants.TimeBoard.shareLabel)
@@ -82,6 +84,9 @@ struct TimeBoard: View {
             }
             .sheet(isPresented: $editTimerShowing) {
                 EditTimer(timer: FirstTimer(), isPresented: $editTimerShowing)
+            }
+            .sheet(isPresented: $showShareSheet) {
+                ShareSheet(activityItems: [timer.emoji, timer.name, timer.endDate])
             }
         }
         

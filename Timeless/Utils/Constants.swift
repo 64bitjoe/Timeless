@@ -37,6 +37,7 @@ struct Constants {
         static var countdownLabel = "Countdown to:"
         static var dateTimeLabel = "Date & Time"
         static var saveButton = "Save"
+        static var navTitle = "Configure Countdown"
         
     }
     struct AddTimer {

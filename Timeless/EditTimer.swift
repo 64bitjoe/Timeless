@@ -51,7 +51,7 @@ struct EditTimer: View {
                     .alert(isPresented: $showingAlert) {
                         Alert(title: Text(Constants.ModifyTimer.emojiErrorTitle), message: Text(Constants.ModifyTimer.emojiErrorMessage),             dismissButton: .destructive(Text(Constants.ModifyTimer.emojiErrorButton)))
                     }
-                }.navigationTitle("Configure Countdown")
+                }.navigationTitle(Constants.ModifyTimer.navTitle)
         }
     }
     func saveButton() {
