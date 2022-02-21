@@ -16,7 +16,7 @@ struct Constants {
         static var edit = Image(systemName: "pencil")
     }
     struct Labels {
-        static var appName = "Cats Does Countdown"
+        static var appName = "TimeBoard"
         
     }
     

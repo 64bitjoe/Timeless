@@ -6,6 +6,7 @@
 // Navication controller
 
 import SwiftUI
+import CoreData
 
 struct TimelessTabView: View {
     var body: some View {
@@ -13,12 +14,18 @@ struct TimelessTabView: View {
             TimeBoard(timer: FirstTimer())
                 .tabItem {
                     Image(systemName: "clock")
-                    Text("Countdown")
+                    Text("TimeBoard")
                 }
             EditTimer(timer: FirstTimer(), isPresented: .constant(true))
                 .tabItem {
                     Image(systemName: "gearshape")
                     Text("Settings")
+                }
+            ShareTextView()
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+                .tabItem {
+                    Image(systemName: "pencil")
+                    Text("Placeholder")
                 }
         }
     }
