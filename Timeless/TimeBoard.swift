@@ -6,8 +6,16 @@
 // Managing the amount of Time Platters to display
 // Possible array to hold time patter content?
 import SwiftUI
+import CoreData
 
 struct TimeBoard: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \ShareText.msg, ascending: true)], animation: .default)
+    
+    private var items: FetchedResults<Countdown>
+    
     let Const = Constants.TimeBoard.self
     
     @State private var selectedTab = 1
@@ -21,54 +29,60 @@ struct TimeBoard: View {
     var body: some View {
         NavigationView{
             ScrollView{
-                ForEach(countOfTimers, id: \.self ) { countOfTimers in
-                    GroupBox() {
-                        HStack {
-                            Menu {
-                                Button {
-                                    showShareSheet.toggle()
-                                    
+                if items.count <= 1 {
+                    AddTimer()
+                        .onTapGesture(count: 1) {
+                            editTimerShowing.toggle()
+                            getRecordsCount()
+                        }
+
+                }else {
+                ForEach(items, id: \.self ) { items in
+                        GroupBox() {
+                            HStack {
+                                Menu {
+                                    Button {
+                                        showShareSheet.toggle()
+                                        
+                                    } label: {
+                                        Constants.Images.share
+                                        Text(Constants.TimeBoard.shareLabel)
+                                    }
+                                    Button {
+                                        editTimerShowing.toggle()
+                                    } label: {
+                                        Constants.Images.edit
+                                        Text(Constants.TimeBoard.editLabel)
+                                    }
                                 } label: {
-                                    Constants.Images.share
-                                    Text(Constants.TimeBoard.shareLabel)
+                                    Text(items.emoji!).font(.largeTitle)
                                 }
-                                Button {
-                                    editTimerShowing.toggle()
-                                } label: {
-                                    Constants.Images.edit
-                                    Text(Constants.TimeBoard.editLabel)
-                                }
-                            } label: {
-                                Text(timer.emoji).font(.largeTitle)
+                                Text(items.name!)
+                                    .foregroundStyle(Constants.Gradient.gradient)
+                                    .font(.largeTitle.bold())
+                                Spacer()
                             }
-                            Text(timer.name)
-                                .foregroundStyle(Constants.Gradient.gradient)
-                                .font(.largeTitle.bold())
-                            Spacer()
+                            
+                            LazyVStack {
+                                Text(Constants.TimeBoard.timeLeft)
+                                    .font(.subheadline)
+                                Text("140 Days")
+                                    .font(.largeTitle).bold()
+                                Text("1 Hour, 48 Minutes")
+                            }
+                            
+                            
                         }
-                        
-                        LazyVStack {
-                            Text(Constants.TimeBoard.timeLeft)
-                                .font(.subheadline)
-                            Text("140 Days")
-                                .font(.largeTitle).bold()
-                            Text("1 Hour, 48 Minutes")
-                        }
-                        
-                        
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(timer.color, lineWidth: 1)
+                        )
+                        .padding()
                     }
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(timer.color, lineWidth: 1)
-                    )
-                    
-                    .padding()
+
                     
                 }
-                AddTimer()
-                    .onTapGesture(count: 1) {
-                        editTimerShowing.toggle()
-                    }
+                
             }
             .padding(.top, 7.5)
             .navigationTitle(Constants.Labels.appName)
@@ -76,7 +90,6 @@ struct TimeBoard: View {
                 Button {
                     editTimerShowing.toggle()
                     //TODO: Create Modal to add in countdown.
-                    countOfTimers.append(countOfTimers.count+1)
                 } label: {
                     Constants.Images.plus
                 }
@@ -91,7 +104,17 @@ struct TimeBoard: View {
         }
         
     }
-    
+    func getRecordsCount() {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Countdown")
+        do {
+            try viewContext.count(for: fetchRequest)
+            print(viewContext.count)
+            
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+     }
 }
 
 struct TimeBoard_Previews: PreviewProvider {

@@ -14,19 +14,20 @@ struct AddTimer: View {
         GroupBox() {
             LazyVStack {
                 Text(constants.startText)
-//                    .foregroundStyle(Constants.Gradient.gradient)
+                    .foregroundStyle(Constants.Gradient.gradient)
                     .font(.largeTitle.bold())
                 Text(constants.createText)
                     .font(.subheadline)
                     .padding(.bottom)
                 Image(systemName: "plus.square.fill")
+                    .foregroundColor(Color.gray)
                     .font(.largeTitle.bold())
             }
             
         }
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.gray, lineWidth: 1)
+                .stroke(Color.indigo, lineWidth: 1)
         )
         .padding()
     }
