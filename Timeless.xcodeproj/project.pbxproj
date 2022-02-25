@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		413090D127C8094D005672A5 /* ShareTextPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413090D027C8094D005672A5 /* ShareTextPersistence.swift */; };
 		4133E2642794D70800C0AB1B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4133E2632794D70800C0AB1B /* Constants.swift */; };
 		41391BED27975ECB00154C83 /* IconNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41391BEC27975ECB00154C83 /* IconNames.swift */; };
 		41391BF02797601500154C83 /* Watermelon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41391BEE2797601500154C83 /* Watermelon@3x.png */; };
@@ -27,13 +28,14 @@
 		D88F54CD257D349300B76099 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F54CC257D349300B76099 /* ContentView.swift */; };
 		D88F54CF257D349400B76099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88F54CE257D349400B76099 /* Assets.xcassets */; };
 		D88F54D2257D349400B76099 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88F54D1257D349400B76099 /* Preview Assets.xcassets */; };
-		D88F54D4257D349400B76099 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F54D3257D349400B76099 /* Persistence.swift */; };
+		D88F54D4257D349400B76099 /* TimeBoardPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F54D3257D349400B76099 /* TimeBoardPersistence.swift */; };
 		D88F54D7257D349400B76099 /* Timeless.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D88F54D5257D349400B76099 /* Timeless.xcdatamodeld */; };
 		D8EEF6F0257D3DB5007C237A /* TimeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */; };
 		D8EEF6F4257E8784007C237A /* TimelessTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EEF6F3257E8784007C237A /* TimelessTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		413090D027C8094D005672A5 /* ShareTextPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTextPersistence.swift; sourceTree = "<group>"; };
 		4133E2632794D70800C0AB1B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		41391BEC27975ECB00154C83 /* IconNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconNames.swift; sourceTree = "<group>"; };
 		41391BEE2797601500154C83 /* Watermelon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Watermelon@3x.png"; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		D88F54CC257D349300B76099 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D88F54CE257D349400B76099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D88F54D1257D349400B76099 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D88F54D3257D349400B76099 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D88F54D3257D349400B76099 /* TimeBoardPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBoardPersistence.swift; sourceTree = "<group>"; };
 		D88F54D6257D349400B76099 /* Timeless.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Timeless.xcdatamodel; sourceTree = "<group>"; };
 		D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBoard.swift; sourceTree = "<group>"; };
 		D8EEF6F3257E8784007C237A /* TimelessTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessTabView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,8 @@
 		41391BE827975B6E00154C83 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				D88F54D3257D349400B76099 /* TimeBoardPersistence.swift */,
+				413090D027C8094D005672A5 /* ShareTextPersistence.swift */,
 				D88F54CE257D349400B76099 /* Assets.xcassets */,
 				D88F54D5257D349400B76099 /* Timeless.xcdatamodeld */,
 			);
@@ -97,6 +101,7 @@
 		41391BEB27975D0100154C83 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				41391BFA279760C000154C83 /* IconSwitcher.swift */,
 				41391BEF2797601500154C83 /* Watermelon@2x.png */,
 				41391BEE2797601500154C83 /* Watermelon@3x.png */,
 				41391BF32797603D00154C83 /* In The Dark@2x.png */,
@@ -145,8 +150,6 @@
 				D81B08C226492B4C004256E2 /* FirstTimer.swift */,
 				D8EEF6F3257E8784007C237A /* TimelessTabView.swift */,
 				D81B08C026491B55004256E2 /* EditTimer.swift */,
-				41391BFA279760C000154C83 /* IconSwitcher.swift */,
-				D88F54D3257D349400B76099 /* Persistence.swift */,
 				D88F54D0257D349400B76099 /* Preview Content */,
 				D845A17325832ED30001DFAF /* Preset_Data.swift */,
 			);
@@ -239,12 +242,13 @@
 				D845A17425832ED30001DFAF /* Preset_Data.swift in Sources */,
 				413A972727C0237100673481 /* ShareTextView.swift in Sources */,
 				4150777727BC0C46009DCDBF /* ShareSheet.swift in Sources */,
-				D88F54D4257D349400B76099 /* Persistence.swift in Sources */,
+				D88F54D4257D349400B76099 /* TimeBoardPersistence.swift in Sources */,
 				D81B08C326492B4C004256E2 /* FirstTimer.swift in Sources */,
 				41391BFB279760C000154C83 /* IconSwitcher.swift in Sources */,
 				D88F54CD257D349300B76099 /* ContentView.swift in Sources */,
 				41391BED27975ECB00154C83 /* IconNames.swift in Sources */,
 				D8EEF6F0257D3DB5007C237A /* TimeBoard.swift in Sources */,
+				413090D127C8094D005672A5 /* ShareTextPersistence.swift in Sources */,
 				4133E2642794D70800C0AB1B /* Constants.swift in Sources */,
 				D8EEF6F4257E8784007C237A /* TimelessTabView.swift in Sources */,
 				D81B08C126491B55004256E2 /* EditTimer.swift in Sources */,

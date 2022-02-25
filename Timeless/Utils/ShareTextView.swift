@@ -12,18 +12,27 @@ struct ShareTextView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \ShareText.msg, ascending: true)], animation: .default)
-    
     private var items: FetchedResults<ShareText>
+    
+    @State private var shareTextInput =  ""
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) {item in
-                    Text(item.msg!)
+            VStack {
+                List {
+                    ForEach(items) {item in
+                        Text(item.msg!)
+                        
+                    }
+                    .onDelete(perform: deleteItems)
                     
                 }
-                .onDelete(perform: deleteItems)
-                
+                TextField(
+                    "Share Message",
+                    text: $shareTextInput
+                ).onSubmit {
+                    addItem()
+                }
             }
             .navigationBarTitle(Text("Customize Share Text"))
             .toolbar {
@@ -40,7 +49,7 @@ struct ShareTextView: View {
 
     private func addItem() {
     let newItem = ShareText(context: viewContext)
-    newItem.msg = "Test"
+    newItem.msg = shareTextInput
     
     do {
         try viewContext.save()
@@ -68,6 +77,6 @@ struct ShareTextView: View {
 
 struct ShareTextView_Previews: PreviewProvider {
     static var previews: some View {
-        ShareTextView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ShareTextView().environment(\.managedObjectContext, ShareTextPersistenceController.preview.container.viewContext)
     }
 }
