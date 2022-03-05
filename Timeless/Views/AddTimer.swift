@@ -14,7 +14,7 @@ struct AddTimer: View {
         GroupBox() {
             LazyVStack {
                 Text(constants.startText)
-                    .foregroundStyle(Constants.Gradient.gradient)
+                    .foregroundStyle(Constants.Gradients.gradient)
                     .font(.largeTitle.bold())
                 Text(constants.createText)
                     .font(.subheadline)

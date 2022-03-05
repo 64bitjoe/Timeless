@@ -58,7 +58,7 @@ struct TimeBoard: View {
                                     Text(items.emoji!).font(.largeTitle)
                                 }
                                 Text(items.name!)
-                                    .foregroundStyle(Constants.Gradient.gradient)
+                                    .foregroundStyle(Constants.Gradients.gradient)
                                     .font(.largeTitle.bold())
                                 Spacer()
                             }

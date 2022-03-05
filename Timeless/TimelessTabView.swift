@@ -23,7 +23,7 @@ struct TimelessTabView: View {
                     Text("Settings")
                 }
             ShareTextView()
-                .environment(\.managedObjectContext, ShareTextPersistenceController.shared.container.viewContext)
+//                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
                 .tabItem {
                     Image(systemName: "pencil")
                     Text("Placeholder")

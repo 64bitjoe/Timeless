@@ -6,22 +6,18 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct ShareTextView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \ShareText.msg, ascending: true)], animation: .default)
-    private var items: FetchedResults<ShareText>
     
     @State private var shareTextInput =  ""
+    @ObservedObject var sharedText = SharedText()
     
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(items) {item in
-                        Text(item.msg!)
+                    ForEach(sharedText.items) {item in
+                        Text(item.message)
                         
                     }
                     .onDelete(perform: deleteItems)
@@ -30,9 +26,14 @@ struct ShareTextView: View {
                 TextField(
                     "Share Message",
                     text: $shareTextInput
-                ).onSubmit {
+                )
+                    .textFieldStyle(.roundedBorder)
+
+                    .onSubmit {
                     addItem()
                 }
+                    .padding([.leading, .trailing], 10)
+                    .padding(.bottom, 5)
             }
             .navigationBarTitle(Text("Customize Share Text"))
             .toolbar {
@@ -48,29 +49,22 @@ struct ShareTextView: View {
     }
 
     private func addItem() {
-    let newItem = ShareText(context: viewContext)
-    newItem.msg = shareTextInput
-    
-    do {
-        try viewContext.save()
-        
-    } catch {
-        let nsError = error as NSError
-        fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-    }
+//    let newItem = ShareText(context: viewContext)
+//    newItem.msg = shareTextInput
+//
+//    do {
+//        try viewContext.save()
+//
+//    } catch {
+//        let nsError = error as NSError
+//        fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+//    }
 }
     
     
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+            sharedText.items.remove(atOffsets: offsets)
         }
     }
 }

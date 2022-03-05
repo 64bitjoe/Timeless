@@ -12,6 +12,7 @@ struct EditTimer: View {
     @Binding var isPresented: Bool
     @State private var showingSheet = false
     @State private var showingAlert = false
+    @State private var gradentToggle = false
     @State private var pickerValue = 0
     @State private var name = ""
     @State private var emoji = ""
@@ -28,6 +29,9 @@ struct EditTimer: View {
 //                                    .font(.title)
                             
                             ColorPicker(Constants.ModifyTimer.colorLabel, selection: $color, supportsOpacity: false)
+                            
+                            Toggle("Gradient", isOn: $gradentToggle)
+                       
                         }
                         Section (header: Text(Constants.ModifyTimer.countdownLabel)) {
                             DatePicker(selection: $countdownDate, label: { Text(Constants.ModifyTimer.dateTimeLabel) })

@@ -46,7 +46,7 @@ struct Constants {
 
     }
     
-    struct Gradient {
+    struct Gradients {
         static var gradient: LinearGradient {
             LinearGradient(colors: [.red, .purple, .blue], startPoint: .leading, endPoint: .trailing)
         }
