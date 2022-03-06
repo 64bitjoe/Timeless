@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		413090D127C8094D005672A5 /* ShareTextPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413090D027C8094D005672A5 /* ShareTextPersistence.swift */; };
 		4133E2642794D70800C0AB1B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4133E2632794D70800C0AB1B /* Constants.swift */; };
 		41391BED27975ECB00154C83 /* IconNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41391BEC27975ECB00154C83 /* IconNames.swift */; };
 		41391BF02797601500154C83 /* Watermelon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41391BEE2797601500154C83 /* Watermelon@3x.png */; };
@@ -22,6 +21,7 @@
 		4150777527B851CA009DCDBF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4150777427B851CA009DCDBF /* Extensions.swift */; };
 		4150777727BC0C46009DCDBF /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4150777627BC0C46009DCDBF /* ShareSheet.swift */; };
 		41BDC57B27D0F5C0001C3A3E /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC57A27D0F5C0001C3A3E /* UserDefaultsUtil.swift */; };
+		41BDC57D27D54117001C3A3E /* AddShareText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC57C27D54117001C3A3E /* AddShareText.swift */; };
 		D81B08C126491B55004256E2 /* EditTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B08C026491B55004256E2 /* EditTimer.swift */; };
 		D81B08C326492B4C004256E2 /* FirstTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B08C226492B4C004256E2 /* FirstTimer.swift */; };
 		D845A17425832ED30001DFAF /* Preset_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D845A17325832ED30001DFAF /* Preset_Data.swift */; };
@@ -36,7 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		413090D027C8094D005672A5 /* ShareTextPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTextPersistence.swift; sourceTree = "<group>"; };
 		4133E2632794D70800C0AB1B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		41391BEC27975ECB00154C83 /* IconNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconNames.swift; sourceTree = "<group>"; };
 		41391BEE2797601500154C83 /* Watermelon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Watermelon@3x.png"; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		4150777427B851CA009DCDBF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4150777627BC0C46009DCDBF /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		41BDC57A27D0F5C0001C3A3E /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
+		41BDC57C27D54117001C3A3E /* AddShareText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShareText.swift; sourceTree = "<group>"; };
 		D81B08C026491B55004256E2 /* EditTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimer.swift; sourceTree = "<group>"; };
 		D81B08C226492B4C004256E2 /* FirstTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimer.swift; sourceTree = "<group>"; };
 		D845A17325832ED30001DFAF /* Preset_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset_Data.swift; sourceTree = "<group>"; };
@@ -81,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				D88F54D3257D349400B76099 /* TimeBoardPersistence.swift */,
-				413090D027C8094D005672A5 /* ShareTextPersistence.swift */,
 				D88F54CE257D349400B76099 /* Assets.xcassets */,
 				D88F54D5257D349400B76099 /* Timeless.xcdatamodeld */,
 			);
@@ -118,6 +117,7 @@
 		414E734927B596A000B00A6A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41BDC57C27D54117001C3A3E /* AddShareText.swift */,
 				414E734A27B596C400B00A6A /* AddTimer.swift */,
 				D88F54CC257D349300B76099 /* ContentView.swift */,
 			);
@@ -243,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D845A17425832ED30001DFAF /* Preset_Data.swift in Sources */,
+				41BDC57D27D54117001C3A3E /* AddShareText.swift in Sources */,
 				413A972727C0237100673481 /* ShareTextView.swift in Sources */,
 				4150777727BC0C46009DCDBF /* ShareSheet.swift in Sources */,
 				D88F54D4257D349400B76099 /* TimeBoardPersistence.swift in Sources */,
@@ -251,7 +252,6 @@
 				D88F54CD257D349300B76099 /* ContentView.swift in Sources */,
 				41391BED27975ECB00154C83 /* IconNames.swift in Sources */,
 				D8EEF6F0257D3DB5007C237A /* TimeBoard.swift in Sources */,
-				413090D127C8094D005672A5 /* ShareTextPersistence.swift in Sources */,
 				41BDC57B27D0F5C0001C3A3E /* UserDefaultsUtil.swift in Sources */,
 				4133E2642794D70800C0AB1B /* Constants.swift in Sources */,
 				D8EEF6F4257E8784007C237A /* TimelessTabView.swift in Sources */,

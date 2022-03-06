@@ -51,6 +51,7 @@ struct ShareTextView: View {
     private func addItem() {
         if shareTextInput.isEmpty {
             //TODO: Send Alert to tell user to input text before saving
+            
         } else {
             let item = ShareTextObject(message: shareTextInput)
             self.sharedText.items.append(item)

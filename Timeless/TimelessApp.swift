@@ -9,12 +9,10 @@ import SwiftUI
 
 @main
 struct TimelessApp: App {
-//    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             TimelessTabView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

@@ -45,10 +45,18 @@ struct Constants {
         static var createText = "Create First timer"
 
     }
+    struct AddText {
+        static var startText = "Share the countdown with style."
+        static var createText = "Add custom share messages"
+        
+    }
     
     struct Gradients {
         static var gradient: LinearGradient {
             LinearGradient(colors: [.red, .purple, .blue], startPoint: .leading, endPoint: .trailing)
+        }
+        static var seccondGradient: LinearGradient {
+            LinearGradient(colors: [.mint, .cyan, .blue], startPoint: .leading, endPoint: .trailing)
         }
     }
 }
