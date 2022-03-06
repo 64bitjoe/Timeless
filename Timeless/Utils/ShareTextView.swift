@@ -49,16 +49,13 @@ struct ShareTextView: View {
     }
 
     private func addItem() {
-//    let newItem = ShareText(context: viewContext)
-//    newItem.msg = shareTextInput
-//
-//    do {
-//        try viewContext.save()
-//
-//    } catch {
-//        let nsError = error as NSError
-//        fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//    }
+        if shareTextInput.isEmpty {
+            //TODO: Send Alert to tell user to input text before saving
+        } else {
+            let item = ShareTextObject(message: shareTextInput)
+            self.sharedText.items.append(item)
+            
+        }
 }
     
     
