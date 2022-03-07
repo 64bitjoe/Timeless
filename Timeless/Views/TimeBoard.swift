@@ -12,7 +12,7 @@ struct TimeBoard: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \ShareText.msg, ascending: true)], animation: .default)
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Countdown.timestamp, ascending: true)], animation: .default)
     
     private var items: FetchedResults<Countdown>
     
@@ -35,9 +35,9 @@ struct TimeBoard: View {
                             editTimerShowing.toggle()
                             getRecordsCount()
                         }
-
+                    
                 }else {
-                ForEach(items, id: \.self ) { items in
+                    ForEach(items, id: \.self ) { items in
                         GroupBox() {
                             HStack {
                                 Menu {
@@ -79,7 +79,7 @@ struct TimeBoard: View {
                         )
                         .padding()
                     }
-
+                    
                     
                 }
                 
@@ -96,7 +96,7 @@ struct TimeBoard: View {
                 
             }
             .sheet(isPresented: $editTimerShowing) {
-                EditTimer(timer: FirstTimer(), isPresented: $editTimerShowing)
+                EditTimer(timer: FirstTimer(), isPresented: $editTimerShowing, navBarTitle: .constant(Constants.ModifyTimer.editTimer))
             }
             .sheet(isPresented: $showShareSheet) {
                 ShareSheet(activityItems: [timer.emoji, timer.name, timer.endDate])
@@ -114,7 +114,7 @@ struct TimeBoard: View {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
-     }
+    }
 }
 
 struct TimeBoard_Previews: PreviewProvider {

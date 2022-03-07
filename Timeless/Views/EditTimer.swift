@@ -10,6 +10,7 @@ import SwiftUI
 struct EditTimer: View {
     @ObservedObject var timer: FirstTimer
     @Binding var isPresented: Bool
+    @Binding var navBarTitle: String
     @State private var showingSheet = false
     @State private var showingAlert = false
     @State private var gradentToggle = false
@@ -19,7 +20,7 @@ struct EditTimer: View {
     @State private var color = Color.gray
     @State private var countdownDate = Date()
     var body: some View {
-        NavigationView {
+//        NavigationView {
                 VStack {
                     Form {
                         Section (header: Text(Constants.ModifyTimer.firstSectionHeader)) {
@@ -55,8 +56,8 @@ struct EditTimer: View {
                     .alert(isPresented: $showingAlert) {
                         Alert(title: Text(Constants.ModifyTimer.emojiErrorTitle), message: Text(Constants.ModifyTimer.emojiErrorMessage),             dismissButton: .destructive(Text(Constants.ModifyTimer.emojiErrorButton)))
                     }
-                }.navigationTitle(Constants.ModifyTimer.navTitle)
-        }
+                }.navigationTitle(navBarTitle)
+//        }
     }
     func saveButton() {
         // Save changes
@@ -68,8 +69,8 @@ struct EditTimer: View {
 
 struct EditTimer_Previews: PreviewProvider {
     static var previews: some View {
-        EditTimer(timer: FirstTimer(), isPresented: .constant(true))
-        EditTimer(timer: FirstTimer(), isPresented: .constant(true))
+        EditTimer(timer: FirstTimer(), isPresented: .constant(true), navBarTitle: .constant(Constants.ModifyTimer.createTimer))
+        EditTimer(timer: FirstTimer(), isPresented: .constant(true), navBarTitle: .constant(Constants.ModifyTimer.createTimer))
             .preferredColorScheme(.dark)
 
     }

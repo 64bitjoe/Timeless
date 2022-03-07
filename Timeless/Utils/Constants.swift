@@ -27,6 +27,8 @@ struct Constants {
         static var timeLeft = "Time Left"
     }
     struct ModifyTimer {
+        static var createTimer = "Create Timer"
+        static var editTimer = "Edit Timer"
         static var firstSectionHeader = "Set Details"
         static var coutndownTextFeild = "Vacation!"
         static var emojiTextFeild = "Type an emoji"

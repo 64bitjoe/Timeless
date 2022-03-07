@@ -19,15 +19,20 @@ struct TimelessApp: App {
                         Image(systemName: "clock")
                         Text("TimeBoard")
                     }
-                EditTimer(timer: FirstTimer(), isPresented: .constant(true))
+//                EditTimer(timer: FirstTimer(), isPresented: .constant(true), navBarTitle: .constant(Constants.ModifyTimer.createTimer))
+//                    .tabItem {
+//                        Image(systemName: "gearshape")
+//                        Text("Settings")
+//                    }
+//                ShareTextView()
+//                    .tabItem {
+//                        Image(systemName: "pencil")
+//                        Text("Placeholder")
+//                    }
+                Settings()
                     .tabItem {
                         Image(systemName: "gearshape")
                         Text("Settings")
-                    }
-                ShareTextView()
-                    .tabItem {
-                        Image(systemName: "pencil")
-                        Text("Placeholder")
                     }
             }
         }

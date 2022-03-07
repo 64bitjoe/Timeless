@@ -15,7 +15,6 @@ struct ShareTextView: View {
     @ObservedObject var sharedText = SharedText()
     
     var body: some View {
-        NavigationView {
             VStack {
                 List {
                     ForEach(sharedText.items) {item in
@@ -51,7 +50,6 @@ struct ShareTextView: View {
             .sheet(isPresented: $getStartedModal) {
                 AddShareText(isPresented: $getStartedModal)
             }
-        }
     }
 
     private func addItem() {

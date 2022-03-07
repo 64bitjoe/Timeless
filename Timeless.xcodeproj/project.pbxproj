@@ -78,7 +78,6 @@
 				41391BEC27975ECB00154C83 /* IconNames.swift */,
 				4150777427B851CA009DCDBF /* Extensions.swift */,
 				4150777627BC0C46009DCDBF /* ShareSheet.swift */,
-				413A972627C0237100673481 /* ShareTextView.swift */,
 				41BDC57A27D0F5C0001C3A3E /* UserDefaultsUtil.swift */,
 			);
 			path = Utils;
@@ -87,6 +86,7 @@
 		414E734927B596A000B00A6A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				413A972627C0237100673481 /* ShareTextView.swift */,
 				D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */,
 				D81B08C226492B4C004256E2 /* FirstTimer.swift */,
 				41BDC57E27D67CEC001C3A3E /* Settings.swift */,
