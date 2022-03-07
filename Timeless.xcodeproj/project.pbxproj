@@ -9,13 +9,6 @@
 /* Begin PBXBuildFile section */
 		4133E2642794D70800C0AB1B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4133E2632794D70800C0AB1B /* Constants.swift */; };
 		41391BED27975ECB00154C83 /* IconNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41391BEC27975ECB00154C83 /* IconNames.swift */; };
-		41391BF02797601500154C83 /* Watermelon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41391BEE2797601500154C83 /* Watermelon@3x.png */; };
-		41391BF12797601500154C83 /* Watermelon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41391BEF2797601500154C83 /* Watermelon@2x.png */; };
-		41391BF42797603D00154C83 /* In The Dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41391BF22797603D00154C83 /* In The Dark@3x.png */; };
-		41391BF52797603D00154C83 /* In The Dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41391BF32797603D00154C83 /* In The Dark@2x.png */; };
-		41391BF82797605300154C83 /* OTB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41391BF62797605300154C83 /* OTB@2x.png */; };
-		41391BF92797605300154C83 /* OTB@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41391BF72797605300154C83 /* OTB@3x.png */; };
-		41391BFB279760C000154C83 /* IconSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41391BFA279760C000154C83 /* IconSwitcher.swift */; };
 		413A972727C0237100673481 /* ShareTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A972627C0237100673481 /* ShareTextView.swift */; };
 		414E734B27B596C400B00A6A /* AddTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E734A27B596C400B00A6A /* AddTimer.swift */; };
 		4150777527B851CA009DCDBF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4150777427B851CA009DCDBF /* Extensions.swift */; };
@@ -37,13 +30,6 @@
 /* Begin PBXFileReference section */
 		4133E2632794D70800C0AB1B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		41391BEC27975ECB00154C83 /* IconNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconNames.swift; sourceTree = "<group>"; };
-		41391BEE2797601500154C83 /* Watermelon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Watermelon@3x.png"; sourceTree = "<group>"; };
-		41391BEF2797601500154C83 /* Watermelon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Watermelon@2x.png"; sourceTree = "<group>"; };
-		41391BF22797603D00154C83 /* In The Dark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "In The Dark@3x.png"; sourceTree = "<group>"; };
-		41391BF32797603D00154C83 /* In The Dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "In The Dark@2x.png"; sourceTree = "<group>"; };
-		41391BF62797605300154C83 /* OTB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OTB@2x.png"; sourceTree = "<group>"; };
-		41391BF72797605300154C83 /* OTB@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OTB@3x.png"; sourceTree = "<group>"; };
-		41391BFA279760C000154C83 /* IconSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSwitcher.swift; sourceTree = "<group>"; };
 		413A972627C0237100673481 /* ShareTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTextView.swift; sourceTree = "<group>"; };
 		4149861C279762C700CC205D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		414E734A27B596C400B00A6A /* AddTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimer.swift; sourceTree = "<group>"; };
@@ -98,20 +84,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		41391BEB27975D0100154C83 /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				41391BFA279760C000154C83 /* IconSwitcher.swift */,
-				41391BEF2797601500154C83 /* Watermelon@2x.png */,
-				41391BEE2797601500154C83 /* Watermelon@3x.png */,
-				41391BF32797603D00154C83 /* In The Dark@2x.png */,
-				41391BF22797603D00154C83 /* In The Dark@3x.png */,
-				41391BF62797605300154C83 /* OTB@2x.png */,
-				41391BF72797605300154C83 /* OTB@3x.png */,
-			);
-			path = Icons;
-			sourceTree = "<group>";
-		};
 		414E734927B596A000B00A6A /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				4149861C279762C700CC205D /* Info.plist */,
-				41391BEB27975D0100154C83 /* Icons */,
 				41391BEA27975BD200154C83 /* Utils */,
 				41391BE827975B6E00154C83 /* SupportingFiles */,
 				D88F54CA257D349300B76099 /* TimelessApp.swift */,
@@ -221,13 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41391BF12797601500154C83 /* Watermelon@2x.png in Resources */,
-				41391BF02797601500154C83 /* Watermelon@3x.png in Resources */,
-				41391BF42797603D00154C83 /* In The Dark@3x.png in Resources */,
-				41391BF52797603D00154C83 /* In The Dark@2x.png in Resources */,
 				D88F54D2257D349400B76099 /* Preview Assets.xcassets in Resources */,
-				41391BF92797605300154C83 /* OTB@3x.png in Resources */,
-				41391BF82797605300154C83 /* OTB@2x.png in Resources */,
 				D88F54CF257D349400B76099 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,7 +210,6 @@
 				4150777727BC0C46009DCDBF /* ShareSheet.swift in Sources */,
 				D88F54D4257D349400B76099 /* TimeBoardPersistence.swift in Sources */,
 				D81B08C326492B4C004256E2 /* FirstTimer.swift in Sources */,
-				41391BFB279760C000154C83 /* IconSwitcher.swift in Sources */,
 				41391BED27975ECB00154C83 /* IconNames.swift in Sources */,
 				D8EEF6F0257D3DB5007C237A /* TimeBoard.swift in Sources */,
 				41BDC57B27D0F5C0001C3A3E /* UserDefaultsUtil.swift in Sources */,
