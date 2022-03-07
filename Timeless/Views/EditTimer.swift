@@ -66,7 +66,7 @@ struct EditTimer: View {
     }
 }
 
-struct Settings_Previews: PreviewProvider {
+struct EditTimer_Previews: PreviewProvider {
     static var previews: some View {
         EditTimer(timer: FirstTimer(), isPresented: .constant(true))
         EditTimer(timer: FirstTimer(), isPresented: .constant(true))

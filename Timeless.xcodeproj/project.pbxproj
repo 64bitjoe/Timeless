@@ -22,6 +22,7 @@
 		4150777727BC0C46009DCDBF /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4150777627BC0C46009DCDBF /* ShareSheet.swift */; };
 		41BDC57B27D0F5C0001C3A3E /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC57A27D0F5C0001C3A3E /* UserDefaultsUtil.swift */; };
 		41BDC57D27D54117001C3A3E /* AddShareText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC57C27D54117001C3A3E /* AddShareText.swift */; };
+		41BDC57F27D67CEC001C3A3E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC57E27D67CEC001C3A3E /* Settings.swift */; };
 		D81B08C126491B55004256E2 /* EditTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B08C026491B55004256E2 /* EditTimer.swift */; };
 		D81B08C326492B4C004256E2 /* FirstTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B08C226492B4C004256E2 /* FirstTimer.swift */; };
 		D845A17425832ED30001DFAF /* Preset_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D845A17325832ED30001DFAF /* Preset_Data.swift */; };
@@ -52,6 +53,7 @@
 		4150777627BC0C46009DCDBF /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		41BDC57A27D0F5C0001C3A3E /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
 		41BDC57C27D54117001C3A3E /* AddShareText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShareText.swift; sourceTree = "<group>"; };
+		41BDC57E27D67CEC001C3A3E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		D81B08C026491B55004256E2 /* EditTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimer.swift; sourceTree = "<group>"; };
 		D81B08C226492B4C004256E2 /* FirstTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimer.swift; sourceTree = "<group>"; };
 		D845A17325832ED30001DFAF /* Preset_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset_Data.swift; sourceTree = "<group>"; };
@@ -117,6 +119,11 @@
 		414E734927B596A000B00A6A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */,
+				D81B08C226492B4C004256E2 /* FirstTimer.swift */,
+				D8EEF6F3257E8784007C237A /* TimelessTabView.swift */,
+				41BDC57E27D67CEC001C3A3E /* Settings.swift */,
+				D81B08C026491B55004256E2 /* EditTimer.swift */,
 				41BDC57C27D54117001C3A3E /* AddShareText.swift */,
 				414E734A27B596C400B00A6A /* AddTimer.swift */,
 				D88F54CC257D349300B76099 /* ContentView.swift */,
@@ -143,16 +150,12 @@
 		D88F54C9257D349300B76099 /* Timeless */ = {
 			isa = PBXGroup;
 			children = (
-				414E734927B596A000B00A6A /* Views */,
 				4149861C279762C700CC205D /* Info.plist */,
 				41391BEB27975D0100154C83 /* Icons */,
 				41391BEA27975BD200154C83 /* Utils */,
 				41391BE827975B6E00154C83 /* SupportingFiles */,
 				D88F54CA257D349300B76099 /* TimelessApp.swift */,
-				D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */,
-				D81B08C226492B4C004256E2 /* FirstTimer.swift */,
-				D8EEF6F3257E8784007C237A /* TimelessTabView.swift */,
-				D81B08C026491B55004256E2 /* EditTimer.swift */,
+				414E734927B596A000B00A6A /* Views */,
 				D88F54D0257D349400B76099 /* Preview Content */,
 				D845A17325832ED30001DFAF /* Preset_Data.swift */,
 			);
@@ -260,6 +263,7 @@
 				D88F54CB257D349300B76099 /* TimelessApp.swift in Sources */,
 				D88F54D7257D349400B76099 /* Timeless.xcdatamodeld in Sources */,
 				4150777527B851CA009DCDBF /* Extensions.swift in Sources */,
+				41BDC57F27D67CEC001C3A3E /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
