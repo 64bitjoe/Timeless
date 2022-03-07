@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddShareText: View {
     @State var tapped = false
+    @Binding var isPresented: Bool
     let constants = Constants.AddText.self
     var body: some View {
         GroupBox() {
@@ -29,12 +30,15 @@ struct AddShareText: View {
                 .stroke(Color.indigo, lineWidth: 1)
         )
         .padding()
+        .onTapGesture {
+            isPresented.toggle()
+        }
     }
 }
 
 struct AddShareText_Previews: PreviewProvider {
     static var previews: some View {
-        AddShareText()
+        AddShareText(isPresented: .constant(true))
 
     }
 }

@@ -10,6 +10,8 @@ import SwiftUI
 struct ShareTextView: View {
     
     @State private var shareTextInput =  ""
+    @State private var getStartedModal = true
+    
     @ObservedObject var sharedText = SharedText()
     
     var body: some View {
@@ -23,6 +25,7 @@ struct ShareTextView: View {
                     .onDelete(perform: deleteItems)
                     
                 }
+                
                 TextField(
                     "Share Message",
                     text: $shareTextInput
@@ -44,6 +47,9 @@ struct ShareTextView: View {
                     Constants.Images.plus
                 }
                 
+            }
+            .sheet(isPresented: $getStartedModal) {
+                AddShareText(isPresented: $getStartedModal)
             }
         }
     }
@@ -69,6 +75,6 @@ struct ShareTextView: View {
 
 struct ShareTextView_Previews: PreviewProvider {
     static var previews: some View {
-        ShareTextView().environment(\.managedObjectContext, ShareTextPersistenceController.preview.container.viewContext)
+        ShareTextView()
     }
 }
