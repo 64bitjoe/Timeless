@@ -38,15 +38,7 @@ struct ShareTextView: View {
                     .padding(.bottom, 5)
             }
             .navigationBarTitle(Text("Customize Share Text"))
-            .toolbar {
-                Button {
-                    addItem()
-                    
-                } label: {
-                    Constants.Images.plus
-                }
-                
-            }
+
             .sheet(isPresented: $getStartedModal) {
                 AddShareText(isPresented: $getStartedModal)
             }
