@@ -52,6 +52,12 @@ struct Constants {
         static var createText = "Add custom share messages"
         
     }
+    struct Settings {
+        static var navTitle = "Settings"
+        static var editLabel = "Edit Share Text"
+        static var createLabel = "Create Countdown"
+        static var aboutLabel = "About"
+    }
     
     struct Gradients {
         static var gradient: LinearGradient {

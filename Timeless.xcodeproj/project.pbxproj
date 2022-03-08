@@ -15,6 +15,7 @@
 		41BDC57B27D0F5C0001C3A3E /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC57A27D0F5C0001C3A3E /* UserDefaultsUtil.swift */; };
 		41BDC57D27D54117001C3A3E /* AddShareText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC57C27D54117001C3A3E /* AddShareText.swift */; };
 		41BDC57F27D67CEC001C3A3E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC57E27D67CEC001C3A3E /* Settings.swift */; };
+		41BDC58227D7EB47001C3A3E /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC58127D7EB47001C3A3E /* About.swift */; };
 		D81B08C126491B55004256E2 /* EditTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B08C026491B55004256E2 /* EditTimer.swift */; };
 		D81B08C326492B4C004256E2 /* FirstTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B08C226492B4C004256E2 /* FirstTimer.swift */; };
 		D845A17425832ED30001DFAF /* Preset_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D845A17325832ED30001DFAF /* Preset_Data.swift */; };
@@ -36,6 +37,7 @@
 		41BDC57A27D0F5C0001C3A3E /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
 		41BDC57C27D54117001C3A3E /* AddShareText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShareText.swift; sourceTree = "<group>"; };
 		41BDC57E27D67CEC001C3A3E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		41BDC58127D7EB47001C3A3E /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		D81B08C026491B55004256E2 /* EditTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimer.swift; sourceTree = "<group>"; };
 		D81B08C226492B4C004256E2 /* FirstTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimer.swift; sourceTree = "<group>"; };
 		D845A17325832ED30001DFAF /* Preset_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset_Data.swift; sourceTree = "<group>"; };
@@ -83,15 +85,24 @@
 		414E734927B596A000B00A6A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				413A972627C0237100673481 /* ShareTextView.swift */,
+				41BDC58027D7E9EF001C3A3E /* Settings */,
 				D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */,
 				D81B08C226492B4C004256E2 /* FirstTimer.swift */,
-				41BDC57E27D67CEC001C3A3E /* Settings.swift */,
 				D81B08C026491B55004256E2 /* EditTimer.swift */,
-				41BDC57C27D54117001C3A3E /* AddShareText.swift */,
 				414E734A27B596C400B00A6A /* AddTimer.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		41BDC58027D7E9EF001C3A3E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				413A972627C0237100673481 /* ShareTextView.swift */,
+				41BDC57C27D54117001C3A3E /* AddShareText.swift */,
+				41BDC57E27D67CEC001C3A3E /* Settings.swift */,
+				41BDC58127D7EB47001C3A3E /* About.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		D88F54BE257D349300B76099 = {
@@ -202,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D845A17425832ED30001DFAF /* Preset_Data.swift in Sources */,
+				41BDC58227D7EB47001C3A3E /* About.swift in Sources */,
 				41BDC57D27D54117001C3A3E /* AddShareText.swift in Sources */,
 				413A972727C0237100673481 /* ShareTextView.swift in Sources */,
 				4150777727BC0C46009DCDBF /* ShareSheet.swift in Sources */,
