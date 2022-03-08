@@ -60,4 +60,9 @@ class SharedText: ObservableObject {
         }
         self.items = []
     }
+   
+}
+
+func randomShare () -> ShareTextObject {
+    return SharedText.init().items.randomElement()!
 }

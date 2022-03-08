@@ -35,7 +35,7 @@ struct TimeBoard: View {
                             editTimerShowing.toggle()
                             getRecordsCount()
                         }
-                    
+
                 }else {
                     ForEach(items, id: \.self ) { items in
                         GroupBox() {
@@ -99,7 +99,7 @@ struct TimeBoard: View {
                 EditTimer(timer: FirstTimer(), isPresented: $editTimerShowing, navBarTitle: .constant(Constants.ModifyTimer.editTimer))
             }
             .sheet(isPresented: $showShareSheet) {
-                ShareSheet(activityItems: [timer.emoji, timer.name, timer.endDate])
+                ShareSheet(activityItems: [timer.emoji, "\(randomShare().message) \(timer.name)", timer.endDate])
             }
         }
         
