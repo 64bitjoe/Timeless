@@ -78,6 +78,7 @@
 				4150777427B851CA009DCDBF /* Extensions.swift */,
 				4150777627BC0C46009DCDBF /* ShareSheet.swift */,
 				41BDC57A27D0F5C0001C3A3E /* UserDefaultsUtil.swift */,
+				D81B08C226492B4C004256E2 /* FirstTimer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -87,7 +88,6 @@
 			children = (
 				41BDC58027D7E9EF001C3A3E /* Settings */,
 				D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */,
-				D81B08C226492B4C004256E2 /* FirstTimer.swift */,
 				D81B08C026491B55004256E2 /* EditTimer.swift */,
 				414E734A27B596C400B00A6A /* AddTimer.swift */,
 			);
