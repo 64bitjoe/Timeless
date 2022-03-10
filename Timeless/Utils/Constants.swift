@@ -67,4 +67,7 @@ struct Constants {
             LinearGradient(colors: [.mint, .cyan, .blue], startPoint: .leading, endPoint: .trailing)
         }
     }
+    struct LaunchUtil {
+       static let EditScreen = "EditHintSeen"
+    }
 }

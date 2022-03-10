@@ -15,13 +15,11 @@ struct AddShareText: View {
         GroupBox() {
             LazyVStack {
                 Text(constants.startText)
+                    .padding(.bottom)
                     .foregroundStyle(Constants.Gradients.seccondGradient)
                     .font(.largeTitle.bold())
                 Text(constants.createText)
                     .font(.subheadline)
-                Image(systemName: "plus.square.fill")
-                    .foregroundColor(Color.gray)
-                    .font(.largeTitle.bold())
             }
             
         }

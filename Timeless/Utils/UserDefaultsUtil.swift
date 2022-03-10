@@ -66,3 +66,31 @@ class SharedText: ObservableObject {
 func randomShare () -> ShareTextObject {
     return SharedText.init().items.randomElement()!
 }
+
+class LaunchUtil {
+    
+    static func firstLaunch() -> Bool {
+        let launchedBefore = UserDefaults.standard.bool(forKey: Constants.LaunchUtil.EditScreen)
+        if launchedBefore {
+            return false
+        } else {
+            let item = ShareTextObject(message: "Look at this!")
+            SharedText().items.append(item)
+            firstLaunchComplete()
+            return true
+        }
+    }
+    
+    static func firstLaunchComplete() {
+        UserDefaults.standard.set(true, forKey: Constants.LaunchUtil.EditScreen)
+    }
+    
+    static func checkLaunch() -> Bool{
+        if UserDefaults.standard.bool(forKey: Constants.LaunchUtil.EditScreen) {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+

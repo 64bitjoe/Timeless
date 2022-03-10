@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SwiftUI
 
 extension Character {
     
@@ -32,4 +32,14 @@ extension String {
     var emojis: [Character] { filter { $0.isEmoji } }
 
     var emojiScalars: [UnicodeScalar] { filter { $0.isEmoji }.flatMap { $0.unicodeScalars } }
+}
+
+extension View {
+    func underlineTextField() -> some View {
+        self
+            .padding(.vertical, 10)
+            .overlay(Rectangle().frame(height: 2).padding(.top, 35))
+            .foregroundColor(.indigo)
+            .padding(10)
+    }
 }

@@ -10,12 +10,17 @@ import SwiftUI
 struct ShareTextView: View {
     
     @State private var shareTextInput =  ""
-    @State private var getStartedModal = true
+    @State private var getStartedModal = false
     
     @ObservedObject var sharedText = SharedText()
     
     var body: some View {
             VStack {
+                if getStartedModal == true {
+                    AddShareText(isPresented: $getStartedModal)
+                } else {
+                    EmptyView()
+                }
                 List {
                     ForEach(sharedText.items) {item in
                         Text(item.message)
@@ -25,23 +30,27 @@ struct ShareTextView: View {
                     
                 }
                 
-                TextField(
-                    "Share Message",
-                    text: $shareTextInput
-                )
-                    .textFieldStyle(.roundedBorder)
+                HStack {
+                    Image(systemName: "plus")
+                    TextField(
+                        "Share Message",
+                        text: $shareTextInput
+                    )
+    //                    .textFieldStyle(.roundedBorder)
 
-                    .onSubmit {
-                    addItem()
-                }
-                    .padding([.leading, .trailing], 10)
-                    .padding(.bottom, 5)
+                        .onSubmit {
+                        addItem()
+                            self.shareTextInput = ""
+                        }
+                }.underlineTextField()
+                .padding([ .leading, .trailing], 10)
+            .padding(.bottom, 5)
             }
             .navigationBarTitle(Text("Customize Share Text"))
-
-            .sheet(isPresented: $getStartedModal) {
-                AddShareText(isPresented: $getStartedModal)
-            }
+            .onAppear(perform: {
+                LaunchUtil.firstLaunch()
+                
+            })
     }
 
     private func addItem() {
