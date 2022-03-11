@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4121C5AA27DA79FB00713029 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4121C5A927DA79FB00713029 /* WidgetKit.framework */; };
+		4121C5AC27DA79FB00713029 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4121C5AB27DA79FB00713029 /* SwiftUI.framework */; };
+		4121C5AF27DA79FB00713029 /* TimelessWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5AE27DA79FB00713029 /* TimelessWidget.swift */; };
+		4121C5B227DA79FC00713029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4121C5B127DA79FC00713029 /* Assets.xcassets */; };
+		4121C5B427DA79FC00713029 /* TimelessWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5B027DA79FB00713029 /* TimelessWidget.intentdefinition */; };
+		4121C5B527DA79FC00713029 /* TimelessWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4121C5B027DA79FB00713029 /* TimelessWidget.intentdefinition */; };
+		4121C5B927DA79FC00713029 /* TimelessWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4121C5A727DA79FB00713029 /* TimelessWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4133E2642794D70800C0AB1B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4133E2632794D70800C0AB1B /* Constants.swift */; };
 		413A972727C0237100673481 /* ShareTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A972627C0237100673481 /* ShareTextView.swift */; };
 		414E734B27B596C400B00A6A /* AddTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E734A27B596C400B00A6A /* AddTimer.swift */; };
@@ -27,7 +34,38 @@
 		D8EEF6F0257D3DB5007C237A /* TimeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EEF6EF257D3DB5007C237A /* TimeBoard.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4121C5B627DA79FC00713029 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D88F54BF257D349300B76099 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4121C5A627DA79FB00713029;
+			remoteInfo = TimelessWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4121C5B827DA79FC00713029 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4121C5B927DA79FC00713029 /* TimelessWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4121C5A727DA79FB00713029 /* TimelessWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TimelessWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4121C5A927DA79FB00713029 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4121C5AB27DA79FB00713029 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4121C5AE27DA79FB00713029 /* TimelessWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessWidget.swift; sourceTree = "<group>"; };
+		4121C5B027DA79FB00713029 /* TimelessWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = TimelessWidget.intentdefinition; sourceTree = "<group>"; };
+		4121C5B127DA79FC00713029 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4121C5B327DA79FC00713029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4133E2632794D70800C0AB1B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		413A972627C0237100673481 /* ShareTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTextView.swift; sourceTree = "<group>"; };
 		4149861C279762C700CC205D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +89,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4121C5A427DA79FB00713029 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4121C5AC27DA79FB00713029 /* SwiftUI.framework in Frameworks */,
+				4121C5AA27DA79FB00713029 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D88F54C4257D349300B76099 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,6 +108,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4121C5A827DA79FB00713029 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4121C5A927DA79FB00713029 /* WidgetKit.framework */,
+				4121C5AB27DA79FB00713029 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4121C5AD27DA79FB00713029 /* TimelessWidget */ = {
+			isa = PBXGroup;
+			children = (
+				4121C5AE27DA79FB00713029 /* TimelessWidget.swift */,
+				4121C5B027DA79FB00713029 /* TimelessWidget.intentdefinition */,
+				4121C5B127DA79FC00713029 /* Assets.xcassets */,
+				4121C5B327DA79FC00713029 /* Info.plist */,
+			);
+			path = TimelessWidget;
+			sourceTree = "<group>";
+		};
 		41391BE827975B6E00154C83 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				D88F54C9257D349300B76099 /* Timeless */,
+				4121C5AD27DA79FB00713029 /* TimelessWidget */,
+				4121C5A827DA79FB00713029 /* Frameworks */,
 				D88F54C8257D349300B76099 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				D88F54C7257D349300B76099 /* Timeless.app */,
+				4121C5A727DA79FB00713029 /* TimelessWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +216,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4121C5A627DA79FB00713029 /* TimelessWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4121C5BC27DA79FC00713029 /* Build configuration list for PBXNativeTarget "TimelessWidgetExtension" */;
+			buildPhases = (
+				4121C5A327DA79FB00713029 /* Sources */,
+				4121C5A427DA79FB00713029 /* Frameworks */,
+				4121C5A527DA79FB00713029 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimelessWidgetExtension;
+			productName = TimelessWidgetExtension;
+			productReference = 4121C5A727DA79FB00713029 /* TimelessWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D88F54C6257D349300B76099 /* Timeless */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D88F54DB257D349400B76099 /* Build configuration list for PBXNativeTarget "Timeless" */;
@@ -153,10 +240,12 @@
 				D88F54C3257D349300B76099 /* Sources */,
 				D88F54C4257D349300B76099 /* Frameworks */,
 				D88F54C5257D349300B76099 /* Resources */,
+				4121C5B827DA79FC00713029 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4121C5B727DA79FC00713029 /* PBXTargetDependency */,
 			);
 			name = Timeless;
 			productName = Timeless;
@@ -169,9 +258,12 @@
 		D88F54BF257D349300B76099 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					4121C5A627DA79FB00713029 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					D88F54C6257D349300B76099 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -191,11 +283,20 @@
 			projectRoot = "";
 			targets = (
 				D88F54C6257D349300B76099 /* Timeless */,
+				4121C5A627DA79FB00713029 /* TimelessWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4121C5A527DA79FB00713029 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4121C5B227DA79FC00713029 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D88F54C5257D349300B76099 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,6 +309,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4121C5A327DA79FB00713029 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4121C5B427DA79FC00713029 /* TimelessWidget.intentdefinition in Sources */,
+				4121C5AF27DA79FB00713029 /* TimelessWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D88F54C3257D349300B76099 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +331,7 @@
 				D81B08C326492B4C004256E2 /* FirstTimer.swift in Sources */,
 				D8EEF6F0257D3DB5007C237A /* TimeBoard.swift in Sources */,
 				41BDC57B27D0F5C0001C3A3E /* UserDefaultsUtil.swift in Sources */,
+				4121C5B527DA79FC00713029 /* TimelessWidget.intentdefinition in Sources */,
 				4133E2642794D70800C0AB1B /* Constants.swift in Sources */,
 				D81B08C126491B55004256E2 /* EditTimer.swift in Sources */,
 				414E734B27B596C400B00A6A /* AddTimer.swift in Sources */,
@@ -233,7 +344,75 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4121C5B727DA79FC00713029 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4121C5A627DA79FB00713029 /* TimelessWidgetExtension */;
+			targetProxy = 4121C5B627DA79FC00713029 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		4121C5BA27DA79FC00713029 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XL56SM6U5N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimelessWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TimelessWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = us.joeis.Timeless.TimelessWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4121C5BB27DA79FC00713029 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XL56SM6U5N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimelessWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TimelessWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = us.joeis.Timeless.TimelessWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D88F54D9257D349400B76099 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -353,6 +532,7 @@
 		D88F54DC257D349400B76099 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -377,6 +557,7 @@
 		D88F54DD257D349400B76099 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -401,6 +582,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4121C5BC27DA79FC00713029 /* Build configuration list for PBXNativeTarget "TimelessWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4121C5BA27DA79FC00713029 /* Debug */,
+				4121C5BB27DA79FC00713029 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D88F54C2257D349300B76099 /* Build configuration list for PBXProject "Timeless" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
