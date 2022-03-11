@@ -18,7 +18,7 @@ struct Settings: View {
                             .foregroundColor(.indigo)
                         Text(Constants.Settings.editLabel)
                     }
-                    NavigationLink(destination: EditTimer(timer: FirstTimer(), isPresented: .constant(true), navBarTitle: .constant(Constants.ModifyTimer.createTimer))){
+                    NavigationLink(destination: EditTimer(timer: FirstTimer(), isModal: .constant(false), isPresented: .constant(true), navBarTitle: .constant(Constants.ModifyTimer.createTimer))){
                         Image(systemName: "pencil.circle.fill")
                             .foregroundColor(.indigo)
                         Text(Constants.Settings.createLabel)

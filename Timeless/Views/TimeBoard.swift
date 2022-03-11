@@ -96,7 +96,7 @@ struct TimeBoard: View {
                 
             }
             .sheet(isPresented: $editTimerShowing) {
-                EditTimer(timer: FirstTimer(), isPresented: $editTimerShowing, navBarTitle: .constant(Constants.ModifyTimer.editTimer))
+                EditTimer(timer: FirstTimer(),isModal: .constant(true), isPresented: $editTimerShowing, navBarTitle: .constant(Constants.ModifyTimer.editTimer))
             }
             .sheet(isPresented: $showShareSheet) {
                 ShareSheet(activityItems: [timer.emoji, "\(randomShare().message) \(timer.name)", timer.endDate])

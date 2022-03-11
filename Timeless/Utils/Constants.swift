@@ -10,6 +10,8 @@ import SwiftUI
 
 struct Constants {
     
+    static var emptyString = ""
+    
     struct Images {
         static var plus = Image(systemName: "plus")
         static var share = Image(systemName: "square.and.arrow.up")
@@ -40,6 +42,7 @@ struct Constants {
         static var dateTimeLabel = "Date & Time"
         static var saveButton = "Save"
         static var navTitle = "Configure Countdown"
+        static var gradientLabel = "Gradient"
         
     }
     struct AddTimer {
@@ -50,7 +53,8 @@ struct Constants {
     struct AddText {
         static var startText = "Share the countdown with style."
         static var createText = "Add custom share messages"
-        
+        static var navTitle = "Customize Share Text"
+        static var textFieldPlaceholder = "Share Message"
     }
     struct Settings {
         static var navTitle = "Settings"
@@ -58,7 +62,9 @@ struct Constants {
         static var createLabel = "Create Countdown"
         static var aboutLabel = "About"
     }
-    
+    struct About {
+        static var navTitle = "About Timeless"
+    }
     struct Gradients {
         static var gradient: LinearGradient {
             LinearGradient(colors: [.red, .purple, .blue], startPoint: .leading, endPoint: .trailing)

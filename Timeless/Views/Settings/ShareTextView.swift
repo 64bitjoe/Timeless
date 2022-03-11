@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ShareTextView: View {
     
-    @State private var shareTextInput =  ""
+    @State private var shareTextInput =  Constants.emptyString
     @State private var getStartedModal = false
     
     @ObservedObject var sharedText = SharedText()
@@ -33,20 +33,19 @@ struct ShareTextView: View {
                 HStack {
                     Image(systemName: "plus")
                     TextField(
-                        "Share Message",
+                        Constants.AddText.textFieldPlaceholder,
                         text: $shareTextInput
                     )
-    //                    .textFieldStyle(.roundedBorder)
 
                         .onSubmit {
                         addItem()
-                            self.shareTextInput = ""
+                            self.shareTextInput = Constants.emptyString
                         }
                 }.underlineTextField()
                 .padding([ .leading, .trailing], 10)
             .padding(.bottom, 5)
             }
-            .navigationBarTitle(Text("Customize Share Text"))
+            .navigationBarTitle(Text(Constants.AddText.navTitle))
             .onAppear(perform: {
                 LaunchUtil.firstLaunch()
                 
