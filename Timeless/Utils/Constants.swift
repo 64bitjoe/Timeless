@@ -21,6 +21,9 @@ struct Constants {
         static var appName = "TimeBoard"
         
     }
+    struct Defaults {
+        static var initalShareText = "Look at this!"
+    }
     
     struct TimeBoard {
         static var padding = 10.0

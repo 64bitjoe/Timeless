@@ -74,7 +74,7 @@ class LaunchUtil {
         if launchedBefore {
             return false
         } else {
-            let item = ShareTextObject(message: "Look at this!")
+            let item = ShareTextObject(message: Constants.Defaults.initalShareText)
             SharedText().items.append(item)
             firstLaunchComplete()
             return true

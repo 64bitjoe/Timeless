@@ -10,17 +10,17 @@ import SwiftUI
 struct ShareTextView: View {
     
     @State private var shareTextInput =  Constants.emptyString
-    @State private var getStartedModal = false
+    @State private var getStartedModal = true
     
     @ObservedObject var sharedText = SharedText()
     
     var body: some View {
             VStack {
-                if getStartedModal == true {
-                    AddShareText(isPresented: $getStartedModal)
-                } else {
-                    EmptyView()
-                }
+//                if getStartedModal == true {
+//                    AddShareText(isPresented: $getStartedModal)
+//                } else {
+//                    EmptyView()
+//                }
                 List {
                     ForEach(sharedText.items) {item in
                         Text(item.message)

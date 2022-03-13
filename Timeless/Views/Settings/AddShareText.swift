@@ -12,25 +12,27 @@ struct AddShareText: View {
     @Binding var isPresented: Bool
     let constants = Constants.AddText.self
     var body: some View {
-        GroupBox() {
-            LazyVStack {
-                Text(constants.startText)
-                    .padding(.bottom)
-                    .foregroundStyle(Constants.Gradients.seccondGradient)
-                    .font(.largeTitle.bold())
-                Text(constants.createText)
-                    .font(.subheadline)
+        ZStack {
+            GroupBox() {
+                LazyVStack {
+                    Text(constants.startText)
+                        .padding(.bottom)
+                        .foregroundStyle(Constants.Gradients.seccondGradient)
+                        .font(.largeTitle.bold())
+                    Text(constants.createText)
+                        .font(.subheadline)
+                }
+                
             }
-            
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color.indigo, lineWidth: 1)
+            )
+            .padding()
+            .onTapGesture {
+                isPresented.toggle()
         }
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.indigo, lineWidth: 1)
-        )
-        .padding()
-        .onTapGesture {
-            isPresented.toggle()
-        }
+        }            .background(.background)
     }
 }
 
