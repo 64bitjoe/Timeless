@@ -16,6 +16,7 @@
 		41BDC57D27D54117001C3A3E /* AddShareText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC57C27D54117001C3A3E /* AddShareText.swift */; };
 		41BDC57F27D67CEC001C3A3E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC57E27D67CEC001C3A3E /* Settings.swift */; };
 		41BDC58227D7EB47001C3A3E /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC58127D7EB47001C3A3E /* About.swift */; };
+		41FEFA2A27DFD9A9000A821A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FEFA2927DFD9A9000A821A /* Color.swift */; };
 		D81B08C126491B55004256E2 /* EditTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B08C026491B55004256E2 /* EditTimer.swift */; };
 		D81B08C326492B4C004256E2 /* FirstTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B08C226492B4C004256E2 /* FirstTimer.swift */; };
 		D845A17425832ED30001DFAF /* Preset_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D845A17325832ED30001DFAF /* Preset_Data.swift */; };
@@ -38,6 +39,7 @@
 		41BDC57C27D54117001C3A3E /* AddShareText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShareText.swift; sourceTree = "<group>"; };
 		41BDC57E27D67CEC001C3A3E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		41BDC58127D7EB47001C3A3E /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		41FEFA2927DFD9A9000A821A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D81B08C026491B55004256E2 /* EditTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimer.swift; sourceTree = "<group>"; };
 		D81B08C226492B4C004256E2 /* FirstTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimer.swift; sourceTree = "<group>"; };
 		D845A17325832ED30001DFAF /* Preset_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset_Data.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				4150777627BC0C46009DCDBF /* ShareSheet.swift */,
 				41BDC57A27D0F5C0001C3A3E /* UserDefaultsUtil.swift */,
 				D81B08C226492B4C004256E2 /* FirstTimer.swift */,
+				41FEFA2927DFD9A9000A821A /* Color.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				41BDC58227D7EB47001C3A3E /* About.swift in Sources */,
 				41BDC57D27D54117001C3A3E /* AddShareText.swift in Sources */,
 				413A972727C0237100673481 /* ShareTextView.swift in Sources */,
+				41FEFA2A27DFD9A9000A821A /* Color.swift in Sources */,
 				4150777727BC0C46009DCDBF /* ShareSheet.swift in Sources */,
 				D88F54D4257D349400B76099 /* TimeBoardPersistence.swift in Sources */,
 				D81B08C326492B4C004256E2 /* FirstTimer.swift in Sources */,

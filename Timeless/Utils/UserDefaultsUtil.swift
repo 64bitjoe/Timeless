@@ -31,7 +31,39 @@ class UserDefaultsUtil {
     }
     
 }
+struct TimerObject: Identifiable, Codable {
+    
+    var id = UUID()
+    let name: String
+    let emoji: String
+    let color: Color
+    let gradient: [Color]
+    let date : String
+}
+class Timer: ObservableObject {
+    @Published var items = [TimerObject]() {
+        didSet {
+            let encoder = JSONEncoder()
+            
+            if let encoded = try?
+                encoder.encode(items){
+                UserDefaults.standard.set(encoded, forKey:"Timers")
+            }
+        }
+    }
+    init() {
+        if let items = UserDefaults.standard.data(forKey: "Timers"){
+            let decoder = JSONDecoder()
+            
+            if let decoded = try? decoder.decode([TimerObject].self, from: items){
+            self.items = decoded
+            return
+        }
+        self.items = []
+    }
+    }
 
+}
 struct ShareTextObject: Identifiable, Codable {
     var id = UUID()
     let message: String
