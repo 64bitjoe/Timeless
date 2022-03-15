@@ -14,7 +14,6 @@ struct TimelessApp: App {
         WindowGroup {
             TabView {
                 TimeBoard(timer: FirstTimer())
-                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
                     .tabItem {
                         Image(systemName: "clock")
                         Text("TimeBoard")

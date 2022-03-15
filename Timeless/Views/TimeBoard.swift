@@ -6,20 +6,14 @@
 // Managing the amount of Time Platters to display
 // Possible array to hold time patter content?
 import SwiftUI
-import CoreData
 
 struct TimeBoard: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    
-    
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Countdown.timestamp, ascending: true)], animation: .default)
-    
-    private var items: FetchedResults<Countdown>
+    @ObservedObject var timers = Timers()
     
     let Const = Constants.TimeBoard.self
     
     @State private var selectedTab = 1
-    @State private var countOfTimers = [0]
+//    @State private var countOfTimers = [0]
     @State private var editTimerShowing = false
     @State private var pickerValue = 0
     @State private var showShareSheet = false
@@ -29,15 +23,15 @@ struct TimeBoard: View {
     var body: some View {
         NavigationView{
             ScrollView{
-                if items.count <= 1 {
-                    AddTimer()
-                        .onTapGesture(count: 1) {
-                            editTimerShowing.toggle()
-                            getRecordsCount()
-                        }
-
-                }else {
-                    ForEach(items, id: \.self ) { items in
+//                if $timers.items.count <= 1 {
+//                    AddTimer()
+//                        .onTapGesture(count: 1) {
+//                            editTimerShowing.toggle()
+////                            getRecordsCount()
+//                        }
+//
+//                }else {
+                    ForEach(timers.items) { items in
                         GroupBox() {
                             HStack {
                                 Menu {
@@ -55,9 +49,9 @@ struct TimeBoard: View {
                                         Text(Constants.TimeBoard.editLabel)
                                     }
                                 } label: {
-                                    Text(items.emoji!).font(.largeTitle)
+                                    Text(items.emoji).font(.largeTitle)
                                 }
-                                Text(items.name!)
+                                Text(items.name)
                                     .foregroundStyle(Constants.Gradients.gradient)
                                     .font(.largeTitle.bold())
                                 Spacer()
@@ -75,13 +69,13 @@ struct TimeBoard: View {
                         }
                         .overlay(
                             RoundedRectangle(cornerRadius: 16)
-                                .stroke(timer.color, lineWidth: 1)
+                                .stroke(items.color, lineWidth: 1)
                         )
                         .padding()
                     }
                     
                     
-                }
+//                }
                 
             }
             .padding(.top, 7.5)
@@ -96,7 +90,7 @@ struct TimeBoard: View {
                 
             }
             .sheet(isPresented: $editTimerShowing) {
-                EditTimer(timer: FirstTimer(),isModal: .constant(true), isPresented: $editTimerShowing, navBarTitle: .constant(Constants.ModifyTimer.editTimer))
+                EditTimer(isModal: .constant(true), isPresented: $editTimerShowing, navBarTitle: .constant(Constants.ModifyTimer.editTimer))
             }
             .sheet(isPresented: $showShareSheet) {
                 ShareSheet(activityItems: [timer.emoji, "\(randomShare().message) \(timer.name)", timer.endDate])
@@ -104,18 +98,19 @@ struct TimeBoard: View {
         }
         
     }
-    func getRecordsCount() {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Countdown")
-        do {
-            try viewContext.count(for: fetchRequest)
-            print(viewContext.count)
-            
-        } catch {
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
-    }
+//    func getRecordsCount() {
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Countdown")
+//        do {
+//            try viewContext.count(for: fetchRequest)
+//            print(viewContext.count)
+//
+//        } catch {
+//            let nsError = error as NSError
+//            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+//        }
+//    }
 }
+
 
 struct TimeBoard_Previews: PreviewProvider {
     static var previews: some View {

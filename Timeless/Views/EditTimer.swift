@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct EditTimer: View {
-    @ObservedObject var timer: FirstTimer
+    @ObservedObject var timerObject = Timers()
+    
     @Binding var isModal: Bool
     @Binding var isPresented: Bool
     @Binding var navBarTitle: String
@@ -17,18 +18,18 @@ struct EditTimer: View {
         VStack {
             if isModal {
                 NavigationView {
-                    EditTimerBody(timer: FirstTimer(), isPresented: $isPresented, navBarTitle: $navBarTitle)
+                    EditTimerBody(timer: timerObject, isPresented: $isPresented, navBarTitle: $navBarTitle)
                 }
             } else {
                 EmptyView()
-                EditTimerBody(timer: FirstTimer(), isPresented: $isPresented, navBarTitle: $navBarTitle)
+                EditTimerBody(timer: timerObject, isPresented: $isPresented, navBarTitle: $navBarTitle)
             }
         }
 
     }
 }
 struct EditTimerBody: View {
-    @ObservedObject var timer: FirstTimer
+    @ObservedObject var timer = Timers()
     @Binding var isPresented: Bool
     @Binding var navBarTitle: String
     @State private var showingSheet = false
@@ -45,7 +46,7 @@ struct EditTimerBody: View {
         VStack {
             Form {
                 Section (header: Text(Constants.ModifyTimer.firstSectionHeader)) {
-                    TextField(Constants.ModifyTimer.coutndownTextFeild, text: $timer.name)
+                    TextField(Constants.ModifyTimer.coutndownTextFeild, text: $name)
                         .font(.title2.weight(.semibold))
                     TextField(Constants.ModifyTimer.emojiTextFeild, text: $emoji)
                     
@@ -61,6 +62,7 @@ struct EditTimerBody: View {
             }
             Button {
                 if emoji.isSingleEmoji {
+                    saveButton()
                     isPresented = false
                 } else {
                     showingAlert = true
@@ -84,13 +86,16 @@ struct EditTimerBody: View {
         //TODO: Make it so all feilds must be filled in. allso allow users to create gradient array.
         //TODO: sender makes view conditional.
         isPresented = false
+        
+        let item = TimerObject(id: UUID(), name: name, emoji: emoji, color: color, gradient: [color], date: countdownDate)
+        self.timer.items.append(item)
     }
 }
 
 struct EditTimer_Previews: PreviewProvider {
     static var previews: some View {
-        EditTimer(timer: FirstTimer(), isModal: .constant(true), isPresented: .constant(true), navBarTitle: .constant(Constants.ModifyTimer.createTimer))
-        EditTimer(timer: FirstTimer(), isModal: .constant(false), isPresented: .constant(true), navBarTitle: .constant(Constants.ModifyTimer.createTimer))
+        EditTimer(isModal: .constant(true), isPresented: .constant(true), navBarTitle: .constant(Constants.ModifyTimer.createTimer))
+        EditTimer(isModal: .constant(false), isPresented: .constant(true), navBarTitle: .constant(Constants.ModifyTimer.createTimer))
             .preferredColorScheme(.dark)
 
     }

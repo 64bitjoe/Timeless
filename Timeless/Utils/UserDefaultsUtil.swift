@@ -38,9 +38,10 @@ struct TimerObject: Identifiable, Codable {
     let emoji: String
     let color: Color
     let gradient: [Color]
-    let date : String
+    let date : Date
 }
-class Timer: ObservableObject {
+
+class Timers: ObservableObject {
     @Published var items = [TimerObject]() {
         didSet {
             let encoder = JSONEncoder()
