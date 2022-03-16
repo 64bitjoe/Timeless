@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct EditTimer: View {
-    @ObservedObject var timerObject = Timers()
+    
+    @EnvironmentObject var timerObject: Timers
     
     @Binding var isModal: Bool
     @Binding var isPresented: Bool

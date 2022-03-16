@@ -13,7 +13,8 @@ struct TimelessApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                TimeBoard(timer: FirstTimer())
+                TimeBoard()
+                    .environmentObject(Timers())
                     .tabItem {
                         Image(systemName: "clock")
                         Text("TimeBoard")

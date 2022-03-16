@@ -16,6 +16,7 @@ struct Constants {
         static var plus = Image(systemName: "plus")
         static var share = Image(systemName: "square.and.arrow.up")
         static var edit = Image(systemName: "pencil")
+        static var trash = Image(systemName: "trash")
     }
     struct Labels {
         static var appName = "TimeBoard"

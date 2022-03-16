@@ -8,29 +8,26 @@
 import SwiftUI
 
 struct TimeBoard: View {
-    @ObservedObject var timers = Timers()
     
+    @EnvironmentObject var timers: Timers
+
     let Const = Constants.TimeBoard.self
     
     @State private var selectedTab = 1
-//    @State private var countOfTimers = [0]
     @State private var editTimerShowing = false
     @State private var pickerValue = 0
     @State private var showShareSheet = false
     
-    @ObservedObject var timer: FirstTimer
-    
     var body: some View {
         NavigationView{
-            ScrollView{
-//                if $timers.items.count <= 1 {
-//                    AddTimer()
-//                        .onTapGesture(count: 1) {
-//                            editTimerShowing.toggle()
-////                            getRecordsCount()
-//                        }
-//
-//                }else {
+            List{
+                if $timers.items.count <= 0 {
+                    AddTimer()
+                        .onTapGesture(count: 1) {
+                            editTimerShowing.toggle()
+                        }
+
+                }else {
                     ForEach(timers.items) { items in
                         GroupBox() {
                             HStack {
@@ -65,19 +62,20 @@ struct TimeBoard: View {
                                 Text("1 Hour, 48 Minutes")
                             }
                             
-                            
                         }
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
                         .overlay(
                             RoundedRectangle(cornerRadius: 16)
-                                .stroke(items.color, lineWidth: 1)
+                                .stroke(items.color, lineWidth: 2)
                         )
-                        .padding()
+                        .padding([.leading, .trailing], 0.5)
+                        .listRowSeparator(.hidden)
                     }
-                    
-                    
-//                }
-                
+                    .onDelete(perform: deleteItems)
+                }
             }
+            .listStyle(InsetListStyle())
+            .listRowInsets(EdgeInsets())
             .padding(.top, 7.5)
             .navigationTitle(Constants.Labels.appName)
             .toolbar {
@@ -93,7 +91,7 @@ struct TimeBoard: View {
                 EditTimer(isModal: .constant(true), isPresented: $editTimerShowing, navBarTitle: .constant(Constants.ModifyTimer.editTimer))
             }
             .sheet(isPresented: $showShareSheet) {
-                ShareSheet(activityItems: [timer.emoji, "\(randomShare().message) \(timer.name)", timer.endDate])
+                ShareSheet(activityItems: ["timer.emoji", "\(randomShare().message) \("timer.name")", "timer.endDate"])
             }
         }
         
@@ -109,12 +107,18 @@ struct TimeBoard: View {
 //            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
 //        }
 //    }
+    private func deleteItems(offsets: IndexSet) {
+        withAnimation {
+            timers.items.remove(atOffsets: offsets)
+            
+        }
+    }
 }
 
 
 struct TimeBoard_Previews: PreviewProvider {
     static var previews: some View {
-        TimeBoard(timer: FirstTimer())
+        TimeBoard()
             .previewDevice("iPhone 13 Pro Max")
     }
 }

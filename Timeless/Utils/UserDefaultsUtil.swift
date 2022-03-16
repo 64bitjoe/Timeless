@@ -102,7 +102,7 @@ func randomShare () -> ShareTextObject {
 
 class LaunchUtil {
     
-    static func firstLaunch() -> Bool {
+    static func firstLaunch() -> Bool?{
         let launchedBefore = UserDefaults.standard.bool(forKey: Constants.LaunchUtil.EditScreen)
         if launchedBefore {
             return false
