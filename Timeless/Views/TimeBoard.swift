@@ -50,7 +50,7 @@ struct TimeBoard: View {
                                     Text(items.emoji).font(.largeTitle)
                                 }
                                 Text(items.name)
-                                    .foregroundStyle(Constants.Gradients.gradient)
+                                    .foregroundStyle(LinearGradient(colors: items.gradient, startPoint: .leading, endPoint: .trailing))
                                     .font(.largeTitle.bold())
                                 Spacer()
                             }
@@ -103,6 +103,9 @@ struct TimeBoard: View {
             
         }
     }
+//    private func gradient(colors: [Color]) -> LinearGradient {
+//        return LinearGradient(colors: [Color(colors)], startPoint: .leading, endPoint: .trailing)
+//    }
 }
 
 

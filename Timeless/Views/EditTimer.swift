@@ -35,13 +35,17 @@ struct EditTimerBody: View {
     @Binding var navBarTitle: String
     @State private var showingSheet = false
     @State private var showingAlert = false
+    @State private var missingValueAlert = false
     @State private var gradentToggle = false
     @State private var pickerValue = 0
     @State private var name = Constants.emptyString
     @State private var emoji = Constants.emptyString
     @State private var color = Color.gray
+    @State private var gradientColor0 = Color.clear
+    @State private var gradientColor1 = Color.clear
+    @State private var gradientColor2 = Color.clear
     @State private var countdownDate = Date()
-    
+    @State private var finishedInput = false
     
     var body: some View {
         VStack {
@@ -55,6 +59,13 @@ struct EditTimerBody: View {
                     
                     Toggle(Constants.ModifyTimer.gradientLabel, isOn: $gradentToggle)
                     
+                }
+                if gradentToggle {
+                    Section (header: Text("Gradient Colors")) {
+                        ColorPicker(Constants.ModifyTimer.gradentColor0, selection: $gradientColor0, supportsOpacity: false)
+                        ColorPicker(Constants.ModifyTimer.gradentColor1, selection: $gradientColor1, supportsOpacity: false)
+                        ColorPicker(Constants.ModifyTimer.gradentColor2, selection: $gradientColor2, supportsOpacity: false)
+                    }
                 }
                 Section (header: Text(Constants.ModifyTimer.countdownLabel)) {
                     DatePicker(selection: $countdownDate, label: { Text(Constants.ModifyTimer.dateTimeLabel) })
@@ -79,6 +90,9 @@ struct EditTimerBody: View {
             .alert(isPresented: $showingAlert) {
                 Alert(title: Text(Constants.ModifyTimer.emojiErrorTitle), message: Text(Constants.ModifyTimer.emojiErrorMessage),             dismissButton: .destructive(Text(Constants.ModifyTimer.emojiErrorButton)))
             }
+            .alert(isPresented: $missingValueAlert) {
+                Alert(title: Text(Constants.ModifyTimer.emojiErrorTitle), message: Text(Constants.ModifyTimer.missingValueMessage),             dismissButton: .destructive(Text(Constants.ModifyTimer.emojiErrorButton)))
+            }
         }.navigationTitle(navBarTitle)
     }
     
@@ -86,10 +100,15 @@ struct EditTimerBody: View {
         // Save changes
         //TODO: Make it so all feilds must be filled in. allso allow users to create gradient array.
         //TODO: sender makes view conditional.
-        isPresented = false
         
-        let item = TimerObject(id: UUID(), name: name, emoji: emoji, color: color, gradient: [color], date: countdownDate)
-        self.timer.items.append(item)
+        isPresented = false
+        if name == Constants.emptyString || emoji == Constants.emptyString {
+            // show alert that missing fields are required
+            missingValueAlert.toggle()
+        } else {
+            let item = TimerObject(id: UUID(), name: name, emoji: emoji, color: color, gradient: [gradientColor0, gradientColor1, gradientColor2], date: countdownDate)
+            self.timer.items.append(item)
+        }
     }
 }
 

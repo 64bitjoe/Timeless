@@ -41,7 +41,11 @@ struct Constants {
         static var emojiErrorTitle = "Error"
         static var emojiErrorMessage = "Please Check to make sure that only one emoji was entered."
         static var emojiErrorButton = "Try Again"
+        static var missingValueMessage = "One or more fields are missing entries."
         static var colorLabel = "Set Timer border color"
+        static var gradentColor0 = "Start Color"
+        static var gradentColor1 = "Middle Color"
+        static var gradentColor2 = "End Color"
         static var countdownLabel = "Countdown to:"
         static var dateTimeLabel = "Date & Time"
         static var saveButton = "Save"
@@ -76,6 +80,7 @@ struct Constants {
         static var seccondGradient: LinearGradient {
             LinearGradient(colors: [.mint, .cyan, .blue], startPoint: .leading, endPoint: .trailing)
         }
+        
     }
     struct LaunchUtil {
        static let EditScreen = "EditHintSeen"
