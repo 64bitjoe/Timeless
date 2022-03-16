@@ -5,6 +5,7 @@
 //  Created by Joe Speakman on 12/6/20.
 // Managing the amount of Time Platters to display
 // Possible array to hold time patter content?
+
 import SwiftUI
 
 struct TimeBoard: View {
@@ -81,7 +82,6 @@ struct TimeBoard: View {
             .toolbar {
                 Button {
                     editTimerShowing.toggle()
-                    //TODO: Create Modal to add in countdown.
                 } label: {
                     Constants.Images.plus
                 }
@@ -96,17 +96,7 @@ struct TimeBoard: View {
         }
         
     }
-//    func getRecordsCount() {
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Countdown")
-//        do {
-//            try viewContext.count(for: fetchRequest)
-//            print(viewContext.count)
-//
-//        } catch {
-//            let nsError = error as NSError
-//            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//        }
-//    }
+
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             timers.items.remove(atOffsets: offsets)

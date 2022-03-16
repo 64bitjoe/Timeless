@@ -16,12 +16,13 @@ struct ShareTextView: View {
     
     var body: some View {
             VStack {
-//                if getStartedModal == true {
-//                    AddShareText(isPresented: $getStartedModal)
-//                } else {
-//                    EmptyView()
-//                }
+                if $sharedText.items.count <= 0 {
+                    AddShareText(isPresented: $getStartedModal)
+                } else {
+                    EmptyView()
+                }
                 List {
+
                     ForEach(sharedText.items) {item in
                         Text(item.message)
                         
