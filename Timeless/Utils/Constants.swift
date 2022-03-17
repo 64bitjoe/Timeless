@@ -56,7 +56,7 @@ struct Constants {
     struct AddTimer {
         static var startText = "Get Started"
         static var createText = "Create First timer"
-
+        
     }
     struct AddText {
         static var startText = "Share the countdown with style."
@@ -83,6 +83,6 @@ struct Constants {
         
     }
     struct LaunchUtil {
-       static let EditScreen = "EditHintSeen"
+        static let EditScreen = "EditHintSeen"
     }
 }

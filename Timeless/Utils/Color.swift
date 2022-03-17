@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 fileprivate extension Color {
-
+    
     typealias SystemColor = UIColor
     
     var colorComponents: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)? {
@@ -23,7 +23,7 @@ fileprivate extension Color {
             // Colors using hue, saturation and brightness won't work
             return nil
         }
-            
+        
         return (r, g, b, a)
     }
 }
@@ -41,7 +41,7 @@ extension Color: Codable {
         
         self.init(red: r, green: g, blue: b)
     }
-
+    
     public func encode(to encoder: Encoder) throws {
         guard let colorComponents = self.colorComponents else {
             return

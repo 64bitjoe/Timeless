@@ -18,6 +18,7 @@ struct TimeBoard: View {
     @State private var editTimerShowing = false
     @State private var pickerValue = 0
     @State private var showShareSheet = false
+    @State private var confirmDelete = false
     
     var body: some View {
         NavigationView{
@@ -93,6 +94,9 @@ struct TimeBoard: View {
             .sheet(isPresented: $showShareSheet) {
                 ShareSheet(activityItems: ["timer.emoji", "\(randomShare().message) \("timer.name")", "timer.endDate"])
             }
+//            .alert(isPresented: $confirmDelete) {
+//                Alert(title: Text(Constants.ModifyTimer.emojiErrorTitle), message: Text(Constants.ModifyTimer.missingValueMessage), dismissButton: .destructive(Text("Delete")), secondaryButton: Text("Cancel"))
+//            }
         }
         
     }

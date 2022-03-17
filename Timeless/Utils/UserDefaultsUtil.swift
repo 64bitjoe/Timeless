@@ -57,13 +57,13 @@ class Timers: ObservableObject {
             let decoder = JSONDecoder()
             
             if let decoded = try? decoder.decode([TimerObject].self, from: items){
-            self.items = decoded
-            return
+                self.items = decoded
+                return
+            }
+            self.items = []
         }
-        self.items = []
     }
-    }
-
+    
 }
 struct ShareTextObject: Identifiable, Codable {
     var id = UUID()
@@ -93,7 +93,7 @@ class SharedText: ObservableObject {
         }
         self.items = []
     }
-   
+    
 }
 
 func randomShare () -> ShareTextObject {

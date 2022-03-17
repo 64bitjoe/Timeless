@@ -18,7 +18,6 @@
 		41BDC58227D7EB47001C3A3E /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC58127D7EB47001C3A3E /* About.swift */; };
 		41FEFA2A27DFD9A9000A821A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FEFA2927DFD9A9000A821A /* Color.swift */; };
 		D81B08C126491B55004256E2 /* EditTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B08C026491B55004256E2 /* EditTimer.swift */; };
-		D81B08C326492B4C004256E2 /* FirstTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B08C226492B4C004256E2 /* FirstTimer.swift */; };
 		D845A17425832ED30001DFAF /* Preset_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D845A17325832ED30001DFAF /* Preset_Data.swift */; };
 		D88F54CB257D349300B76099 /* TimelessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F54CA257D349300B76099 /* TimelessApp.swift */; };
 		D88F54CF257D349400B76099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88F54CE257D349400B76099 /* Assets.xcassets */; };
@@ -41,7 +40,6 @@
 		41BDC58127D7EB47001C3A3E /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		41FEFA2927DFD9A9000A821A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D81B08C026491B55004256E2 /* EditTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimer.swift; sourceTree = "<group>"; };
-		D81B08C226492B4C004256E2 /* FirstTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimer.swift; sourceTree = "<group>"; };
 		D845A17325832ED30001DFAF /* Preset_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset_Data.swift; sourceTree = "<group>"; };
 		D88F54C7257D349300B76099 /* Timeless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88F54CA257D349300B76099 /* TimelessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessApp.swift; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 				4150777427B851CA009DCDBF /* Extensions.swift */,
 				4150777627BC0C46009DCDBF /* ShareSheet.swift */,
 				41BDC57A27D0F5C0001C3A3E /* UserDefaultsUtil.swift */,
-				D81B08C226492B4C004256E2 /* FirstTimer.swift */,
 				41FEFA2927DFD9A9000A821A /* Color.swift */,
 			);
 			path = Utils;
@@ -222,7 +219,6 @@
 				41FEFA2A27DFD9A9000A821A /* Color.swift in Sources */,
 				4150777727BC0C46009DCDBF /* ShareSheet.swift in Sources */,
 				D88F54D4257D349400B76099 /* TimeBoardPersistence.swift in Sources */,
-				D81B08C326492B4C004256E2 /* FirstTimer.swift in Sources */,
 				D8EEF6F0257D3DB5007C237A /* TimeBoard.swift in Sources */,
 				41BDC57B27D0F5C0001C3A3E /* UserDefaultsUtil.swift in Sources */,
 				4133E2642794D70800C0AB1B /* Constants.swift in Sources */,
