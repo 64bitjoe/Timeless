@@ -30,7 +30,9 @@ struct Constants {
         static var padding = 10.0
         static var shareLabel = "Share"
         static var editLabel = "Edit Countdown"
-        static var timeLeft = "Time Left"
+        static var inLabel = "in"
+        static var timeLeft = "Days"
+        
     }
     struct ModifyTimer {
         static var createTimer = "Create Timer"

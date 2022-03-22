@@ -36,7 +36,7 @@ struct EditTimerBody: View {
     @State private var showingSheet = false
     @State private var showingAlert = false
     @State private var missingValueAlert = false
-    @State private var gradentToggle = false
+    @State private var gradientToggle = false
     @State private var pickerValue = 0
     @State private var name = Constants.emptyString
     @State private var emoji = Constants.emptyString
@@ -57,10 +57,10 @@ struct EditTimerBody: View {
                     
                     ColorPicker(Constants.ModifyTimer.colorLabel, selection: $color, supportsOpacity: false)
                     
-                    Toggle(Constants.ModifyTimer.gradientLabel, isOn: $gradentToggle)
+                    Toggle(Constants.ModifyTimer.gradientLabel, isOn: $gradientToggle)
                     
                 }
-                if gradentToggle {
+                if gradientToggle {
                     Section (header: Text("Gradient Colors")) {
                         ColorPicker(Constants.ModifyTimer.gradentColor0, selection: $gradientColor0, supportsOpacity: false)
                         ColorPicker(Constants.ModifyTimer.gradentColor1, selection: $gradientColor1, supportsOpacity: false)
@@ -106,7 +106,7 @@ struct EditTimerBody: View {
             // show alert that missing fields are required
             missingValueAlert.toggle()
         } else {
-            let item = TimerObject(id: UUID(), name: name, emoji: emoji, color: color, gradient: [gradientColor0, gradientColor1, gradientColor2], date: countdownDate)
+            let item = TimerObject(id: UUID(), name: name, emoji: emoji, color: color, gradient: [gradientColor0, gradientColor1, gradientColor2], date: countdownDate, gradientEnabled: gradientToggle)
             self.timer.items.append(item)
         }
     }

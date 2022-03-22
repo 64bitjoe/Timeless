@@ -32,36 +32,42 @@ struct TimeBoard: View {
                 }else {
                     ForEach(timers.items) { items in
                         GroupBox() {
-                            HStack {
-                                Menu {
-                                    Button {
-                                        showShareSheet.toggle()
-                                        
-                                    } label: {
-                                        Constants.Images.share
-                                        Text(Constants.TimeBoard.shareLabel)
-                                    }
-                                    Button {
-                                        editTimerShowing.toggle()
-                                    } label: {
-                                        Constants.Images.edit
-                                        Text(Constants.TimeBoard.editLabel)
-                                    }
-                                } label: {
-                                    Text(items.emoji).font(.largeTitle)
-                                }
-                                Text(items.name)
-                                    .foregroundStyle(LinearGradient(colors: items.gradient, startPoint: .leading, endPoint: .trailing))
-                                    .font(.largeTitle.bold())
-                                Spacer()
-                            }
-                            
                             LazyVStack {
-                                Text(Constants.TimeBoard.timeLeft)
-                                    .font(.subheadline)
-                                Text("140 Days")
-                                    .font(.largeTitle).bold()
-                                Text("1 Hour, 48 Minutes")
+                                HStack {
+                                    Menu {
+                                        Button {
+                                            showShareSheet.toggle()
+                                            
+                                        } label: {
+                                            Constants.Images.share
+                                            Text(Constants.TimeBoard.shareLabel)
+                                        }
+                                        Button {
+                                            editTimerShowing.toggle()
+                                        } label: {
+                                            Constants.Images.edit
+                                            Text(Constants.TimeBoard.editLabel)
+                                        }
+                                    } label: {
+                                        Text(items.emoji).font(.largeTitle)
+                                    }
+                                    
+                                    if items.gradientEnabled {
+                                        Text(items.name)
+                                            .font(.largeTitle.bold())
+                                            .foregroundStyle(LinearGradient(colors: items.gradient, startPoint: .leading, endPoint: .trailing))
+                                    } else {
+                                        Text(items.name)
+                                            .font(.largeTitle.bold())
+                                    }
+                                    Spacer()
+                                }
+                                HStack {
+                                    Text(Constants.TimeBoard.inLabel)
+                                    Text("25")
+                                        .font(.largeTitle).bold()
+                                    Text(Constants.TimeBoard.timeLeft)
+                                }
                             }
                             
                         }
@@ -107,9 +113,6 @@ struct TimeBoard: View {
             
         }
     }
-//    private func gradient(colors: [Color]) -> LinearGradient {
-//        return LinearGradient(colors: [Color(colors)], startPoint: .leading, endPoint: .trailing)
-//    }
 }
 
 

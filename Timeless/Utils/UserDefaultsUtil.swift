@@ -39,6 +39,7 @@ struct TimerObject: Identifiable, Codable {
     let color: Color
     let gradient: [Color]
     let date : Date
+    let gradientEnabled: Bool
 }
 
 class Timers: ObservableObject {

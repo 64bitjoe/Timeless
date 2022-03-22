@@ -12,6 +12,7 @@
 		414E734B27B596C400B00A6A /* AddTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E734A27B596C400B00A6A /* AddTimer.swift */; };
 		4150777527B851CA009DCDBF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4150777427B851CA009DCDBF /* Extensions.swift */; };
 		4150777727BC0C46009DCDBF /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4150777627BC0C46009DCDBF /* ShareSheet.swift */; };
+		419437C727E4FBED0031D4B6 /* TimerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419437C627E4FBED0031D4B6 /* TimerUtil.swift */; };
 		41BDC57B27D0F5C0001C3A3E /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC57A27D0F5C0001C3A3E /* UserDefaultsUtil.swift */; };
 		41BDC57D27D54117001C3A3E /* AddShareText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC57C27D54117001C3A3E /* AddShareText.swift */; };
 		41BDC57F27D67CEC001C3A3E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDC57E27D67CEC001C3A3E /* Settings.swift */; };
@@ -34,6 +35,7 @@
 		414E734A27B596C400B00A6A /* AddTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimer.swift; sourceTree = "<group>"; };
 		4150777427B851CA009DCDBF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4150777627BC0C46009DCDBF /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		419437C627E4FBED0031D4B6 /* TimerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerUtil.swift; sourceTree = "<group>"; };
 		41BDC57A27D0F5C0001C3A3E /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
 		41BDC57C27D54117001C3A3E /* AddShareText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShareText.swift; sourceTree = "<group>"; };
 		41BDC57E27D67CEC001C3A3E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				4150777627BC0C46009DCDBF /* ShareSheet.swift */,
 				41BDC57A27D0F5C0001C3A3E /* UserDefaultsUtil.swift */,
 				41FEFA2927DFD9A9000A821A /* Color.swift */,
+				419437C627E4FBED0031D4B6 /* TimerUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				D88F54D7257D349400B76099 /* Timeless.xcdatamodeld in Sources */,
 				4150777527B851CA009DCDBF /* Extensions.swift in Sources */,
 				41BDC57F27D67CEC001C3A3E /* Settings.swift in Sources */,
+				419437C727E4FBED0031D4B6 /* TimerUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
