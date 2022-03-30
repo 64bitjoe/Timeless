@@ -9,14 +9,23 @@ import SwiftUI
 
 struct About: View {
     var body: some View {
-        VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GroupBox {
+            Section{
+                HStack{
+                    Text("Hi, My name is Joe. and I'm a Software Engineer")
+                        .font(.title)
+                    Image("JoeIRL")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
+            Text("Timeless has been my project to push mysle fot learn new skills. This app started before I did the 100 Days of SwiftUI.")
+            }
         }.navigationBarTitle(Text(Constants.About.navTitle))
     }
 }
 
 struct About_Previews: PreviewProvider {
     static var previews: some View {
-        About()
+        Settings()
     }
 }
