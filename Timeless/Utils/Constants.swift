@@ -11,6 +11,7 @@ import SwiftUI
 struct Constants {
     
     static var emptyString = ""
+    static var appColor = Color.indigo
     
     struct Images {
         static var plus = Image(systemName: "plus")

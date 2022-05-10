@@ -27,7 +27,7 @@ struct AddTimer: View {
         }
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.indigo, lineWidth: 1)
+                .stroke(Constants.appColor, lineWidth: 1)
         )
         .padding()
     }

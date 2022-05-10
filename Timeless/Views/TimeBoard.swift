@@ -68,7 +68,7 @@ struct TimeBoard: View {
                                 HStack {
 
                                     Text(Constants.TimeBoard.inLabel)
-                                    Text("\(calculate(targetDate:items.date)))")
+                                    Text("\(calculate(targetDate:items.date))")
                                         .font(.largeTitle).bold()
                                     Text(Constants.TimeBoard.timeLeft)
                                 }

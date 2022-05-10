@@ -15,19 +15,19 @@ struct Settings: View {
                 Section{
                     NavigationLink(destination: ShareTextView()) {
                         Image(systemName: "text.bubble")
-                            .foregroundColor(.indigo)
+                            .foregroundColor(Constants.appColor)
                         Text(Constants.Settings.editLabel)
                     }
                     NavigationLink(destination: EditTimer(isModal: .constant(false), isPresented: .constant(true), navBarTitle: .constant(Constants.ModifyTimer.createTimer))){
                         Image(systemName: "pencil.circle.fill")
-                            .foregroundColor(.indigo)
+                            .foregroundColor(Constants.appColor)
                         Text(Constants.Settings.createLabel)
                     }
                 }
                 Section{
                     NavigationLink(destination: About()){
                         Image(systemName: "person.circle.fill")
-                            .foregroundColor(.indigo)
+                            .foregroundColor(Constants.appColor)
                         Text(Constants.Settings.aboutLabel)
                     }
                     

@@ -84,7 +84,7 @@ struct EditTimerBody: View {
                     .frame(width: 375, height: 50, alignment: .center)
                     .foregroundColor(.white)
                     .background(RoundedRectangle(cornerRadius: 8))
-                    .accentColor(.indigo)
+                    .accentColor(Constants.appColor)
                 
             }
             .alert(isPresented: $showingAlert) {
