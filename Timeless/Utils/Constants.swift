@@ -49,11 +49,12 @@ struct Constants {
         static var gradentColor0 = "Start Color"
         static var gradentColor1 = "Middle Color"
         static var gradentColor2 = "End Color"
-        static var countdownLabel = "Countdown to:"
+        static var countdownLabel = "Countdown Date"
         static var dateTimeLabel = "Date & Time"
         static var saveButton = "Save"
         static var navTitle = "Configure Countdown"
         static var gradientLabel = "Gradient"
+        static var gradientHeader = "Gradient Colors"
         
     }
     struct AddTimer {

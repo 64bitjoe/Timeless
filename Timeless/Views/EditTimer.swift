@@ -50,7 +50,7 @@ struct EditTimerBody: View {
     var body: some View {
         VStack {
             Form {
-                Section (header: Text(Constants.ModifyTimer.firstSectionHeader)) {
+                Section (header: Text(Constants.ModifyTimer.firstSectionHeader).headerProminence(.increased)) {
                     TextField(Constants.ModifyTimer.coutndownTextFeild, text: $name)
                         .font(.title2.weight(.semibold))
                     TextField(Constants.ModifyTimer.emojiTextFeild, text: $emoji)
@@ -61,13 +61,13 @@ struct EditTimerBody: View {
                     
                 }
                 if gradientToggle {
-                    Section (header: Text("Gradient Colors")) {
+                    Section (header: Text(Constants.ModifyTimer.gradientHeader).headerProminence(.increased)) {
                         ColorPicker(Constants.ModifyTimer.gradentColor0, selection: $gradientColor0, supportsOpacity: false)
                         ColorPicker(Constants.ModifyTimer.gradentColor1, selection: $gradientColor1, supportsOpacity: false)
                         ColorPicker(Constants.ModifyTimer.gradentColor2, selection: $gradientColor2, supportsOpacity: false)
                     }
                 }
-                Section (header: Text(Constants.ModifyTimer.countdownLabel)) {
+                Section (header: Text(Constants.ModifyTimer.countdownLabel).headerProminence(.increased)) {
                     DatePicker(selection: $countdownDate, label: { Text(Constants.ModifyTimer.dateTimeLabel) })
                     
                 }
