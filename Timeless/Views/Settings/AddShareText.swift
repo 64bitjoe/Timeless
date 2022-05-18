@@ -22,7 +22,7 @@ struct AddShareText: View {
                     Text(constants.createText)
                         .font(.subheadline)
                 }
-                
+                // ADD FLAG TO REPLACE TIME WITH
             }
             .overlay(
                 RoundedRectangle(cornerRadius: 16)

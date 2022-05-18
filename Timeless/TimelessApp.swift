@@ -20,6 +20,7 @@ struct TimelessApp: App {
                         Text("TimeBoard")
                     }
                 Settings()
+                    .environmentObject(Timers())
                     .tabItem {
                         Image(systemName: "gearshape")
                         Text("Settings")
