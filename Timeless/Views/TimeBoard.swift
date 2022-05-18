@@ -107,7 +107,9 @@ struct TimeBoard: View {
                 ShareSheet(activityItems: ["timer.emoji", "\(randomShare().message) \("timer.name")", "timer.endDate"])
             }
         }
-        
+//        .onAppear() {
+//            timers.objectWillChange
+//        }
     }
     
     private func deleteItems(offsets: IndexSet) {
@@ -118,7 +120,7 @@ struct TimeBoard: View {
     
     func calculate(targetDate: Date) -> String {
         let components = calendar.dateComponents([.hour, .minute, .month, .year, .day], from: targetDate as Date)
-        let currentDate = calendar.date(from: components)
+        let currentDate = Date()
         let yearint = components.year as Int?
         let monthint = components.month as Int?
         let dayint = components.day as Int?
@@ -127,11 +129,9 @@ struct TimeBoard: View {
         competitionDate.month = monthint!
         competitionDate.day = dayint!
         let competitionDay = userCalendar.date(from: competitionDate as DateComponents)!
-        let CompetitionDayDifference = calendar.dateComponents([.day], from: currentDate!, to: competitionDay)
+        let CompetitionDayDifference = calendar.dateComponents([.day], from: currentDate, to: competitionDay)
         let daysLeft = CompetitionDayDifference.day
-//        let hoursLeft = CompetitionDayDifference.hour
-//        let minutesLeft = CompetitionDayDifference.minute
-        
+
         return daysLeft?.description ?? "ERROR"
         
     }

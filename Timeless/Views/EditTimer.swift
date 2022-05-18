@@ -10,6 +10,7 @@ import SwiftUI
 struct EditTimer: View {
     
     @EnvironmentObject var timerObject: Timers
+
     
     @Binding var isModal: Bool
     @Binding var isPresented: Bool
@@ -31,6 +32,7 @@ struct EditTimer: View {
 }
 struct EditTimerBody: View {
     @ObservedObject var timer = Timers()
+    @Environment(\.presentationMode) var presentationMode
     @Binding var isPresented: Bool
     @Binding var navBarTitle: String
     @State private var showingSheet = false
@@ -100,8 +102,8 @@ struct EditTimerBody: View {
         // Save changes
         //TODO: Make it so all feilds must be filled in. allso allow users to create gradient array.
         //TODO: sender makes view conditional.
-        
         isPresented = false
+        self.presentationMode.wrappedValue.dismiss()
         if name == Constants.emptyString || emoji == Constants.emptyString {
             // show alert that missing fields are required
             missingValueAlert.toggle()

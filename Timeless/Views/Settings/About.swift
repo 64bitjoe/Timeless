@@ -9,18 +9,19 @@ import SwiftUI
 
 struct About: View {
     var body: some View {
-        GroupBox {
+//        GroupBox {
             Section{
-                HStack{
+                VStack{
                     Text("Hi, My name is Joe. and I'm a Software Engineer")
                         .font(.title)
                     Image("JoeIRL")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                 }
-            Text("Timeless has been my project to push mysle fot learn new skills. This app started before I did the 100 Days of SwiftUI.")
+            Text("Timeless has been my project to push myself to learn new skills. This project started before I did the 100 Days of SwiftUI.")
             }
-        }.navigationBarTitle(Text(Constants.About.navTitle))
+//    }
+        .navigationBarTitle(Text(Constants.About.navTitle))
     }
 }
 
